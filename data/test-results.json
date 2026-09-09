@@ -1,7 +1,12 @@
 {
   "test_run": {
+<<<<<<< HEAD
     "timestamp": "2026-09-09T01:28:32.549073+00:00",
     "providers_tested": 1,
+=======
+    "timestamp": "2026-09-09T03:32:51.080783+00:00",
+    "providers_tested": 3,
+>>>>>>> 382d5fc (minor modifications)
     "context_sizes": [
       "short",
       "medium",
@@ -15,6 +20,7 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "provider": "groq",
       "display_name": "Groq",
       "base_url": "https://api.groq.com/openai/v1",
@@ -60,37 +66,217 @@
         },
         "context_limits": {
           "provider": "groq",
+=======
+      "provider": "ollama-cloud",
+      "display_name": "Ollama Cloud",
+      "base_url": "https://ollama.com/v1",
+      "base_url_source": "trusted_host",
+      "auth": "none",
+      "tests": {
+        "model_info": {
+          "provider": "ollama-cloud",
+          "models": [
+            {
+              "id": "glm-5.3",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1787929200
+            },
+            {
+              "id": "kimi-k3",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1785164400
+            },
+            {
+              "id": "minimax-m3",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1780272000
+            },
+            {
+              "id": "gemma4:31b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1775149200
+            },
+            {
+              "id": "qwen3.5:397b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1771200000
+            },
+            {
+              "id": "gpt-oss:20b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1754352000
+            },
+            {
+              "id": "glm-5.2",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1781622000
+            },
+            {
+              "id": "kimi-k2.6",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1776643200
+            },
+            {
+              "id": "deepseek-v4-flash:0731",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1785510000
+            },
+            {
+              "id": "mistral-large-3:675b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1764633600
+            },
+            {
+              "id": "deepseek-v4-pro:0813",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1786633200
+            },
+            {
+              "id": "glm-5.3-flash",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1787752800
+            },
+            {
+              "id": "gpt-oss:120b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1754352000
+            },
+            {
+              "id": "nemotron-3-super",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1773187200
+            },
+            {
+              "id": "kimi-k2.7-code",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1781222400
+            },
+            {
+              "id": "nemotron-3-nano:30b",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1765756800
+            },
+            {
+              "id": "minimax-m2.7",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1773792000
+            },
+            {
+              "id": "nemotron-3-ultra",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1780531200
+            },
+            {
+              "id": "glm-5.1",
+              "object": "model",
+              "owned_by": "ollama",
+              "created": 1775574000
+            }
+          ],
+          "status": 200,
+          "latency_ms": 395.6,
+          "total_models": 19
+        },
+        "auth": {
+          "provider": "ollama-cloud",
+          "auth_type": "none",
+          "key_configured": false,
+          "valid_key_status": 401,
+          "invalid_key_status": null,
+          "no_key_status": 401,
+          "key_error_messages": {
+            "valid": "Unauthorized",
+            "no_key": "Unauthorized"
+          },
+          "valid_key_latency_ms": 356.6,
+          "no_key_latency_ms": 363.2
+        },
+        "basic_prompt": {
+          "provider": "ollama-cloud",
+          "basic_prompt": {
+            "status": 401,
+            "latency_ms": 355.2,
+            "has_choices": false,
+            "error": "Unauthorized",
+            "response_length": 0,
+            "model_name": null,
+            "usage": null
+          }
+        },
+        "context_limits": {
+          "provider": "ollama-cloud",
+>>>>>>> 382d5fc (minor modifications)
           "tests": [
             {
               "size_label": "short",
               "approx_words": 100,
+<<<<<<< HEAD
               "status": 200,
               "latency_ms": 716.0,
               "worked": true,
               "error": null,
+=======
+              "status": 401,
+              "latency_ms": 352.4,
+              "worked": false,
+              "error": "HTTP 401",
+>>>>>>> 382d5fc (minor modifications)
               "response_tokens": 0
             },
             {
               "size_label": "medium",
               "approx_words": 1000,
+<<<<<<< HEAD
               "status": 200,
               "latency_ms": 1021.5,
               "worked": true,
               "error": null,
+=======
+              "status": 401,
+              "latency_ms": 354.4,
+              "worked": false,
+              "error": "HTTP 401",
+>>>>>>> 382d5fc (minor modifications)
               "response_tokens": 0
             },
             {
               "size_label": "long",
               "approx_words": 10000,
+<<<<<<< HEAD
               "status": 413,
               "latency_ms": 409.3,
               "worked": false,
               "error": "HTTP 413",
+=======
+              "status": 401,
+              "latency_ms": 362.0,
+              "worked": false,
+              "error": "HTTP 401",
+>>>>>>> 382d5fc (minor modifications)
               "response_tokens": 0
             },
             {
               "size_label": "max",
               "approx_words": 50000,
+<<<<<<< HEAD
               "status": 400,
               "latency_ms": 307.1,
               "worked": false,
@@ -407,6 +593,452 @@
       },
       "usability_score": 10.0,
       "usability_label": "✅ Excellent"
+=======
+              "status": 401,
+              "latency_ms": 345.8,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            }
+          ],
+          "max_working_context": 0
+        },
+        "rate_limits": {
+          "skipped": true,
+          "reason": "Auth not working (status 401)"
+        }
+      },
+      "model_used": "glm-5.3",
+      "model_source": "auto-selected from /models",
+      "usability_score": 3.0,
+      "usability_label": "🟠 Poor"
+    },
+    {
+      "provider": "opencode-zen",
+      "display_name": "OpenCode Zen",
+      "base_url": "https://opencode.ai/zen/v1",
+      "base_url_source": "trusted_host",
+      "auth": "none",
+      "tests": {
+        "model_info": {
+          "provider": "opencode-zen",
+          "models": [
+            {
+              "id": "claude-fable-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-fable-5-1",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-opus-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-opus-4-8",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-opus-4-7",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-opus-4-6",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-opus-4-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-sonnet-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-sonnet-4-6",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-sonnet-4-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-sonnet-4",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "claude-haiku-4-5",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.6-flash",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.8-flash",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.7-flash",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.5-flash-lite",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.5-flash",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3.1-pro",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gemini-3-flash",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            },
+            {
+              "id": "gpt-6-astra",
+              "object": "model",
+              "owned_by": "opencode",
+              "created": 1788924761
+            }
+          ],
+          "status": 200,
+          "latency_ms": 646.3,
+          "total_models": 70
+        },
+        "auth": {
+          "provider": "opencode-zen",
+          "auth_type": "none",
+          "key_configured": false,
+          "valid_key_status": 401,
+          "invalid_key_status": null,
+          "no_key_status": 401,
+          "key_error_messages": {
+            "valid": "Missing API key.",
+            "no_key": "Missing API key."
+          },
+          "valid_key_latency_ms": 643.9,
+          "no_key_latency_ms": 667.6
+        },
+        "basic_prompt": {
+          "provider": "opencode-zen",
+          "basic_prompt": {
+            "status": 401,
+            "latency_ms": 636.7,
+            "has_choices": false,
+            "error": "Missing API key.",
+            "response_length": 0,
+            "model_name": null,
+            "usage": null
+          }
+        },
+        "context_limits": {
+          "provider": "opencode-zen",
+          "tests": [
+            {
+              "size_label": "short",
+              "approx_words": 100,
+              "status": 401,
+              "latency_ms": 635.4,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "medium",
+              "approx_words": 1000,
+              "status": 401,
+              "latency_ms": 669.7,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "long",
+              "approx_words": 10000,
+              "status": 401,
+              "latency_ms": 971.0,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "max",
+              "approx_words": 50000,
+              "status": 401,
+              "latency_ms": 1329.3,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            }
+          ],
+          "max_working_context": 0
+        },
+        "rate_limits": {
+          "skipped": true,
+          "reason": "Auth not working (status 401)"
+        }
+      },
+      "model_used": "claude-fable-5",
+      "model_source": "configured (confirmed by /models)",
+      "usability_score": 3.0,
+      "usability_label": "🟠 Poor"
+    },
+    {
+      "provider": "llm7",
+      "display_name": "LLM7",
+      "base_url": "https://api.llm7.io/v1",
+      "base_url_source": "trusted_host",
+      "auth": "none",
+      "tests": {
+        "model_info": {
+          "provider": "llm7",
+          "models": [
+            {
+              "id": "DeepSeek-V4-Flash-0731",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "Inkling",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917053
+            },
+            {
+              "id": "Inkling-Small",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917053
+            },
+            {
+              "id": "L3-8B-Lunaris-v1-Turbo",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917053
+            },
+            {
+              "id": "XiaomiMiMo/MiMo-V2.5",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917053
+            },
+            {
+              "id": "XiaomiMiMo/MiMo-V2.5-Pro",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917053
+            },
+            {
+              "id": "chroma-v.46-flash",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917052
+            },
+            {
+              "id": "claude-fable-5",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917427
+            },
+            {
+              "id": "claude-fable-5-1",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917427
+            },
+            {
+              "id": "claude-haiku-4-5",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "claude-opus-4-8",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "claude-opus-5",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917427
+            },
+            {
+              "id": "claude-sonnet-4-6",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "claude-sonnet-5",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "codestral-latest",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788916128
+            },
+            {
+              "id": "dark-beast-krea2",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917052
+            },
+            {
+              "id": "deepseek-v4-flash:0731",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917429
+            },
+            {
+              "id": "deepseek-v4-pro",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917429
+            },
+            {
+              "id": "gemini-3-flash",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            },
+            {
+              "id": "gemini-3.1-flash-lite",
+              "object": "model",
+              "owned_by": "",
+              "created": 1788917298
+            }
+          ],
+          "status": 200,
+          "latency_ms": 261.2,
+          "total_models": 45
+        },
+        "auth": {
+          "provider": "llm7",
+          "auth_type": "none",
+          "key_configured": false,
+          "valid_key_status": 401,
+          "invalid_key_status": null,
+          "no_key_status": 401,
+          "key_error_messages": {
+            "valid": "Missing API key.",
+            "no_key": "Missing API key."
+          },
+          "valid_key_latency_ms": 289.7,
+          "no_key_latency_ms": 318.2
+        },
+        "basic_prompt": {
+          "provider": "llm7",
+          "basic_prompt": {
+            "status": 401,
+            "latency_ms": 266.7,
+            "has_choices": false,
+            "error": "Missing API key.",
+            "response_length": 0,
+            "model_name": null,
+            "usage": null
+          }
+        },
+        "context_limits": {
+          "provider": "llm7",
+          "tests": [
+            {
+              "size_label": "short",
+              "approx_words": 100,
+              "status": 401,
+              "latency_ms": 319.0,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "medium",
+              "approx_words": 1000,
+              "status": 401,
+              "latency_ms": 286.8,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "long",
+              "approx_words": 10000,
+              "status": 401,
+              "latency_ms": 545.6,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "max",
+              "approx_words": 50000,
+              "status": 401,
+              "latency_ms": 1336.1,
+              "worked": false,
+              "error": "HTTP 401",
+              "response_tokens": 0
+            }
+          ],
+          "max_working_context": 0
+        },
+        "rate_limits": {
+          "skipped": true,
+          "reason": "Auth not working (status 401)"
+        }
+      },
+      "model_used": "DeepSeek-V4-Flash-0731",
+      "model_source": "auto-selected from /models",
+      "usability_score": 3.0,
+      "usability_label": "🟠 Poor"
+>>>>>>> 382d5fc (minor modifications)
     }
   ]
 }

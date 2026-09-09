@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
  "generated": "2026-09-08T16:01:23.247069+00:00",
+=======
+ "generated": "2026-09-09T03:18:49.051526+00:00",
+>>>>>>> 382d5fc (minor modifications)
  "source": "x.pcstyle.dev",
  "posts_scanned": 82,
  "leads": [
@@ -317,6 +321,11 @@
    ],
    "verified": {
     "status": "active",
+<<<<<<< HEAD
+=======
+    "verified_at": "2026-09-08",
+    "api_base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+>>>>>>> 382d5fc (minor modifications)
     "free_tier": {
      "auth": "API key from AI Studio; no billing account required for free quota",
      "limits_model": "RPM + TPM (input) + RPD, applied per project (not per key); RPD resets midnight Pacific; exact per-model numbers are only shown in AI Studio after login, not published in the docs",
@@ -350,7 +359,11 @@
    "free_token_claims": [],
    "endpoints": [
     "http://tokenrouter.com",
+<<<<<<< HEAD
     "https://api.tokenrouter.com/v1\"",
+=======
+    "https://api.tokenrouter.com/v1",
+>>>>>>> 382d5fc (minor modifications)
     "https://api.tokenrouter.com/v1/chat/completions",
     "https://github.com/ollama/ollama",
     "https://tokenrouter.com",
@@ -436,6 +449,10 @@
    ],
    "verified": {
     "status": "expired",
+<<<<<<< HEAD
+=======
+    "verified_at": "2026-09-08",
+>>>>>>> 382d5fc (minor modifications)
     "via": "tokenrouter.com (third-party reseller, not Moonshot first-party)",
     "promo": {
      "claim": "Free Kimi K3 access with a 1M context window",
@@ -957,7 +974,11 @@
      "reply": false,
      "full": true,
      "windowed": false,
+<<<<<<< HEAD
      "excerpt": "e API mode no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key  Cloudflare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cl"
+=======
+     "excerpt": "no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key  Cloudflare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cloudflare.co"
+>>>>>>> 382d5fc (minor modifications)
     },
     {
      "id": "2092992042712306010",
@@ -1386,7 +1407,11 @@
      "reply": false,
      "full": false,
      "windowed": false,
+<<<<<<< HEAD
      "excerpt": "x M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8NdpaKRz"
+=======
+     "excerpt": "MiniMax M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8Ndp"
+>>>>>>> 382d5fc (minor modifications)
     }
    ],
    "verified": null,

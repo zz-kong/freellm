@@ -1,0 +1,258 @@
+{
+ "generated_at": "2026-09-09T03:39:06+00:00",
+ "note": "Unauthenticated live probes of public model catalogs. model_ids are REAL ids confirmed live; free_models are listed at price 0 as of checked_at.",
+ "sources": {
+  "OpenRouter": {
+   "base_url": "https://openrouter.ai/api/v1",
+   "checked_at": "2026-09-09T03:39:06+00:00",
+   "status": "ok",
+   "free_models": [
+    {
+     "id": "nex-agi/nex-n2.5-mini:free",
+     "name": "Nex AGI: Nex-N2.5-Mini (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "nex-agi/nex-n2.5-pro:free",
+     "name": "Nex AGI: Nex-N2.5-Pro (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "inclusionai/ling-3.0-flash-sante:free",
+     "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "inclusionai/ling-3.0-flash-fin:free",
+     "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "dots-studio/dots-3-note-preview:free",
+     "name": "Dots Studio: Dots3-Note Preview (free)",
+     "context": 512000,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "liquid/lfm-2.5-2.6b:free",
+     "name": "LiquidAI: LFM2.5-2.6B (free)",
+     "context": 65536,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "nvidia/nemotron-3.5-lightning:free",
+     "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+     "context": 1000000,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "thinkingmachines/inkling-small:free",
+     "name": "Thinking Machines: Inkling Small (free)",
+     "context": 1048576,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "poolside/laguna-s-2.1:free",
+     "name": "Poolside: Laguna S 2.1 (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "thinkingmachines/inkling:free",
+     "name": "Thinking Machines: Inkling (free)",
+     "context": 1048576,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "poolside/laguna-xs-2.1:free",
+     "name": "Poolside: Laguna XS 2.1 (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "cohere/north-mini-code:free",
+     "name": "Cohere: North Mini Code (free)",
+     "context": 256000,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "nvidia/nemotron-3.5-content-safety:free",
+     "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+     "context": 128000,
+     "tool_calling": false,
+     "vision": true
+    },
+    {
+     "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+     "name": "NVIDIA: Nemotron 3 Ultra (free)",
+     "context": 1000000,
+     "tool_calling": true,
+     "vision": false
+    },
+    {
+     "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+     "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+     "context": 256000,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "google/gemma-4-26b-a4b-it:free",
+     "name": "Google: Gemma 4 26B A4B  (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "google/gemma-4-31b-it:free",
+     "name": "Google: Gemma 4 31B (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": true
+    },
+    {
+     "id": "google/lyria-3-pro-preview",
+     "name": "Google: Lyria 3 Pro Preview",
+     "context": 1048576,
+     "tool_calling": false,
+     "vision": true
+    },
+    {
+     "id": "google/lyria-3-clip-preview",
+     "name": "Google: Lyria 3 Clip Preview",
+     "context": 1048576,
+     "tool_calling": false,
+     "vision": true
+    },
+    {
+     "id": "nvidia/nemotron-3-super-120b-a12b:free",
+     "name": "NVIDIA: Nemotron 3 Super (free)",
+     "context": 262144,
+     "tool_calling": true,
+     "vision": false
+    }
+   ]
+  },
+  "Groq": {
+   "base_url": "https://api.groq.com/openai/v1",
+   "checked_at": "2026-09-09T03:39:06+00:00",
+   "status": "endpoint_alive_listing_http_401"
+  },
+  "Mistral AI": {
+   "base_url": "https://api.mistral.ai/v1",
+   "checked_at": "2026-09-09T03:39:06+00:00",
+   "status": "endpoint_alive_listing_http_401"
+  },
+  "Cerebras": {
+   "base_url": "https://api.cerebras.ai/v1",
+   "checked_at": "2026-09-09T03:39:07+00:00",
+   "status": "endpoint_alive_listing_http_403"
+  },
+  "LLM7": {
+   "base_url": "https://api.llm7.io/v1",
+   "checked_at": "2026-09-09T03:39:07+00:00",
+   "status": "public_model_list",
+   "model_ids": [
+    "DeepSeek-V4-Flash-0731",
+    "Inkling",
+    "Inkling-Small",
+    "L3-8B-Lunaris-v1-Turbo",
+    "XiaomiMiMo/MiMo-V2.5",
+    "XiaomiMiMo/MiMo-V2.5-Pro",
+    "chroma-v.46-flash",
+    "claude-fable-5",
+    "claude-fable-5-1",
+    "claude-haiku-4-5",
+    "claude-opus-4-8",
+    "claude-opus-5"
+   ],
+   "model_count": 45
+  },
+  "Together AI": {
+   "base_url": "https://api.together.xyz/v1",
+   "checked_at": "2026-09-09T03:39:08+00:00",
+   "status": "endpoint_alive_listing_http_401"
+  },
+  "SiliconFlow": {
+   "base_url": "https://api.siliconflow.cn/v1",
+   "checked_at": "2026-09-09T03:39:08+00:00",
+   "status": "endpoint_alive_listing_http_401"
+  },
+  "Ollama Cloud": {
+   "base_url": "https://ollama.com/v1",
+   "checked_at": "2026-09-09T03:39:08+00:00",
+   "status": "public_model_list",
+   "model_ids": [
+    "kimi-k2.6",
+    "kimi-k2.7-code",
+    "nemotron-3-ultra",
+    "gemma4:31b",
+    "nemotron-3-super",
+    "deepseek-v4-flash:0731",
+    "glm-5.3-flash",
+    "gpt-oss:120b",
+    "mistral-large-3:675b",
+    "glm-5.1",
+    "glm-5.3",
+    "qwen3.5:397b"
+   ],
+   "model_count": 19
+  },
+  "OpenCode Zen": {
+   "base_url": "https://opencode.ai/zen/v1",
+   "checked_at": "2026-09-09T03:39:09+00:00",
+   "status": "public_model_list",
+   "model_ids": [
+    "claude-fable-5",
+    "claude-fable-5-1",
+    "claude-opus-5",
+    "claude-opus-4-8",
+    "claude-opus-4-7",
+    "claude-opus-4-6",
+    "claude-opus-4-5",
+    "claude-sonnet-5",
+    "claude-sonnet-4-6",
+    "claude-sonnet-4-5",
+    "claude-sonnet-4",
+    "claude-haiku-4-5"
+   ],
+   "model_count": 70
+  },
+  "NVIDIA NIM": {
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "checked_at": "2026-09-09T03:39:09+00:00",
+   "status": "public_model_list",
+   "model_ids": [
+    "01-ai/yi-large",
+    "adept/fuyu-8b",
+    "ai21labs/jamba-1.5-large-instruct",
+    "aisingapore/sea-lion-7b-instruct",
+    "bigcode/starcoder2-15b",
+    "databricks/dbrx-instruct",
+    "deepseek-ai/deepseek-coder-6.7b-instruct",
+    "deepseek-ai/deepseek-v4-flash-0731",
+    "deepseek-ai/deepseek-v4-pro-0813",
+    "google/codegemma-1.1-7b",
+    "google/codegemma-7b",
+    "google/deplot"
+   ],
+   "model_count": 81
+  }
+ }
+}

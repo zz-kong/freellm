@@ -10,23 +10,55 @@ Tests each provider in settings.json for:
   - Response quality: latency, token counts, error messages
 
 Usage:
+<<<<<<< HEAD
   python3 scripts/test-apis.py                      # test all
+=======
+  python3 scripts/test-apis.py                      # test providers that have keys
+  python3 scripts/test-apis.py --all                # also probe key-requiring providers without keys
+  python3 scripts/test-apis.py --keyless            # ONLY providers that need no key (CI-safe)
+>>>>>>> 382d5fc (minor modifications)
   python3 scripts/test-apis.py --limit 5            # first 5 only
   python3 scripts/test-apis.py --provider Groq      # one provider
   python3 scripts/test-apis.py --provider Groq --context 50000  # custom context
   python3 scripts/test-apis.py --context-limits short medium long  # which context tests to run
+<<<<<<< HEAD
 """
 import json, os, sys, time, urllib.request, urllib.error, urllib.parse
+=======
+
+Security: API keys are only sent to base_urls verified in data/verified.json
+or listed in trust.TRUSTED_HOSTS - never to URLs scraped from X posts.
+"""
+import json, os, re, sys, time, urllib.request, urllib.error, urllib.parse
+>>>>>>> 382d5fc (minor modifications)
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from pathlib import Path
 
+<<<<<<< HEAD
+=======
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import trust
+
+>>>>>>> 382d5fc (minor modifications)
 BASE_DIR = Path(__file__).resolve().parent.parent
 SETTINGS_FILE = BASE_DIR / "settings.json"
 MODELS_FILE = BASE_DIR / "data/models.json"
 RESULTS_FILE = BASE_DIR / "data/test-results.json"
 LOGS_DIR = BASE_DIR / "logs"
 
+<<<<<<< HEAD
+=======
+# {provider_slug: api_base_url} from data/verified.json - authoritative endpoints.
+VERIFIED_BASES = trust.verified_bases(str(BASE_DIR))
+
+def choice_text(choice):
+    """Response text of a chat-completion choice (message.content; falls back
+    to legacy text completions shape)."""
+    msg = choice.get("message") or {}
+    return msg.get("content") or choice.get("text") or ""
+
+>>>>>>> 382d5fc (minor modifications)
 # Test parameters (override with --context-limits short medium long etc)
 CONTEXT_SIZES = ["short", "medium", "long", "max"]  # short=100, medium=1000, long=10000, max=50000
 RATE_LIMIT_BATCH = 10  # requests to send in rapid burst
@@ -38,6 +70,23 @@ FILLER = "The quick brown fox jumps over the lazy dog. " * 5
 def log(msg):
     print(f"[{datetime.now(timezone.utc).strftime('%H:%M:%S')}] {msg}")
 
+<<<<<<< HEAD
+=======
+def env_candidates(key):
+    """Env var names that could hold the key stored under `key` in settings.json.
+
+    api_keys entries may be written as 'groq', 'GROQ', 'google-gemini' or the
+    legacy 'GROQ_API_KEY' form; accept any spelling of the same name.
+    """
+    base = re.sub(r'[^A-Za-z0-9]+', '_', key).strip('_').upper()
+    names = [base + "_API_KEY"]
+    if base.endswith("_API"):
+        names.append(base + "_KEY")
+    if key.upper().endswith("_API_KEY"):
+        names.append(key.upper())
+    return names
+
+>>>>>>> 382d5fc (minor modifications)
 def load_settings():
     if not SETTINGS_FILE.exists():
         log("ERROR: settings.json not found")
@@ -45,10 +94,18 @@ def load_settings():
     s = json.load(open(SETTINGS_FILE))
     # Read API keys from env vars (overrides settings.json)
     for key in s.get("api_keys", {}):
+<<<<<<< HEAD
         env = f"{key}_API_KEY"
         val = os.environ.get(env, "")
         if val:
             s["api_keys"][key] = val
+=======
+        for env in env_candidates(key):
+            val = os.environ.get(env, "")
+            if val:
+                s["api_keys"][key] = val
+                break
+>>>>>>> 382d5fc (minor modifications)
     return s
 
 def make_request(url, data, headers=None, timeout=30):
@@ -66,11 +123,21 @@ def make_request(url, data, headers=None, timeout=30):
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             elapsed_ms = (time.time() - start) * 1000
+<<<<<<< HEAD
             return resp.status, resp.read().decode('utf-8'), dict(resp.headers), elapsed_ms
     except urllib.error.HTTPError as e:
         elapsed_ms = (time.time() - start) * 1000
         body = e.read().decode('utf-8') if e.fp else ""
         return e.code, body, dict(e.headers), elapsed_ms
+=======
+            hdrs = {k.lower(): v for k, v in dict(resp.headers).items()}
+            return resp.status, resp.read().decode('utf-8'), hdrs, elapsed_ms
+    except urllib.error.HTTPError as e:
+        elapsed_ms = (time.time() - start) * 1000
+        body = e.read().decode('utf-8') if e.fp else ""
+        hdrs = {k.lower(): v for k, v in dict(e.headers).items()}
+        return e.code, body, hdrs, elapsed_ms
+>>>>>>> 382d5fc (minor modifications)
     except Exception as e:
         return None, str(e), {}, 0
 
@@ -159,7 +226,11 @@ def test_basic_prompt(provider_name, base_url, api_key, model_name="gpt-oss-120b
             resp = json.loads(body)
             choices = resp.get("choices", [])
             if choices:
+<<<<<<< HEAD
                 results["basic_prompt"]["response_length"] = len(choices[0].get("text", ""))
+=======
+                results["basic_prompt"]["response_length"] = len(choice_text(choices[0]))
+>>>>>>> 382d5fc (minor modifications)
                 results["basic_prompt"]["model_name"] = resp.get("model")
                 results["basic_prompt"]["usage"] = resp.get("usage")
             else:
@@ -212,7 +283,11 @@ def test_context_limits(provider_name, base_url, api_key, model_name="gpt-oss-12
                 choices = resp.get("choices", [])
                 if choices:
                     test_result["worked"] = True
+<<<<<<< HEAD
                     test_result["response_tokens"] = len(choices[0].get("text", ""))
+=======
+                    test_result["response_tokens"] = len(choice_text(choices[0]))
+>>>>>>> 382d5fc (minor modifications)
                 else:
                     test_result["worked"] = False
                     test_result["error"] = "No choices"
@@ -249,9 +324,16 @@ def test_rate_limits(provider_name, base_url, api_key, model_name="gpt-oss-120b"
     headers = {"Authorization": f"Bearer {api_key}"} if api_key else {}
     
     success = 0
+<<<<<<< HEAD
     first_429 = None
     first_429_batch = None
     
+=======
+    total_sent = 0
+    first_429 = None
+    first_429_batch = None
+
+>>>>>>> 382d5fc (minor modifications)
     for batch_idx in range(5):  # Max 5 batches
         batch_results = []
         for req_idx in range(batch):
@@ -261,12 +343,17 @@ def test_rate_limits(provider_name, base_url, api_key, model_name="gpt-oss-120b"
                 "max_tokens": 5,
             }, headers)
             
+<<<<<<< HEAD
+=======
+            total_sent += 1
+>>>>>>> 382d5fc (minor modifications)
             batch_results.append({
                 "request": batch_idx * batch + req_idx,
                 "status": code,
                 "latency_ms": round(ms, 1),
                 "success": code == 200,
             })
+<<<<<<< HEAD
             
             if code == 429 and first_429 is None:
                 first_429 = batch_idx * batch + req_idx
@@ -274,6 +361,16 @@ def test_rate_limits(provider_name, base_url, api_key, model_name="gpt-oss-120b"
                 # Read Retry-After if available
                 retry_after = hdrs.get("retry-after", [None])[0]
                 batch_results[-1]["retry_after"] = retry_after
+=======
+
+            if code == 429 and first_429 is None:
+                first_429 = batch_idx * batch + req_idx
+                first_429_batch = batch_idx + 1
+                # Read Retry-After if available (header values are strings in
+                # our lowercased headers dict)
+                if hdrs.get("retry-after"):
+                    batch_results[-1]["retry_after"] = hdrs["retry-after"]
+>>>>>>> 382d5fc (minor modifications)
         
         success_this = sum(1 for r in batch_results if r["success"])
         success += success_this
@@ -291,9 +388,16 @@ def test_rate_limits(provider_name, base_url, api_key, model_name="gpt-oss-120b"
             time.sleep(wait)
     
     results["total_success"] = success
+<<<<<<< HEAD
     results["first_429_at_request"] = first_429
     results["first_429_at_batch"] = first_429_batch
     results["success_rate"] = round(success / min(batch * 5, success + 1), 3)
+=======
+    results["total_sent"] = total_sent
+    results["first_429_at_request"] = first_429
+    results["first_429_at_batch"] = first_429_batch
+    results["success_rate"] = round(success / total_sent, 3) if total_sent else 0
+>>>>>>> 382d5fc (minor modifications)
     
     return results
 
@@ -360,6 +464,7 @@ def test_model_info(provider_name, base_url, api_key):
     
     return results
 
+<<<<<<< HEAD
 def get_api_key(provider_key, provider_data, settings):
     """Get API key for provider from env var or settings.json.
     
@@ -416,10 +521,143 @@ def run_test_for_provider(settings, provider_key, provider_data, context_sizes=N
     auth_type = provider_data.get("auth", "api_key")
     model_name = provider_data.get("model_name", "gpt-oss-120b")
     
+=======
+def _norm_key(s):
+    """Canonical form for provider/api-key names: alphanumerics only, lowercase,
+    with a trailing 'api key' suffix removed. 'GROQ_API_KEY', 'GROQ', 'groq' all
+    normalize to 'groq'."""
+    return re.sub(r'[^a-z0-9]+', '', (s or '').lower()).removesuffix('apikey')
+
+# Alternate spellings of the same provider, in normalized form.
+KEY_ALIASES = {
+    'gemini': 'googlegemini',
+    'googlegemini': 'googlegemini',
+    'mistral': 'mistralai',
+    'mistralai': 'mistralai',
+    'cloudflare': 'cloudflareworkersai',
+    'cloudflareworkersai': 'cloudflareworkersai',
+    'zai': 'zai',
+    'z.ai': 'zai',
+}
+
+# Env var names users actually set, per normalized provider (the mechanical
+# NAME_API_KEY derivation can't guess e.g. GEMINI_API_KEY for google-gemini).
+ENV_NAMES = {
+    'groq': ['GROQ_API_KEY'],
+    'googlegemini': ['GEMINI_API_KEY', 'GOOGLE_GEMINI_API_KEY', 'GOOGLEAISTUDIO_API_KEY'],
+    'openrouter': ['OPENROUTER_API_KEY'],
+    'mistralai': ['MISTRAL_API_KEY', 'MISTRALAI_API_KEY'],
+    'cloudflareworkersai': ['CLOUDFLARE_API_KEY', 'CLOUDFLARE_WORKERS_API_KEY'],
+    'cerebras': ['CEREBRAS_API_KEY'],
+    'siliconflow': ['SILICONFLOW_API_KEY'],
+    'ollamacloud': ['OLLAMA_API_KEY', 'OLLAMACLOUD_API_KEY'],
+    'llm7': ['LLM7_API_KEY'],
+}
+
+def _lookup_key(api_keys, needle_norm):
+    """Case/format-insensitive lookup in the api_keys dict."""
+    for k, v in api_keys.items():
+        if v and _norm_key(k) == needle_norm:
+            return v
+    return ""
+
+def get_api_key(provider_key, provider_data, settings):
+    """Get API key for provider from env var or settings.json.
+
+    Env var names use uppercase provider key: GROQ_API_KEY, GEMINI_API_KEY, etc.
+    settings.json api_keys entries are matched case- and format-insensitively,
+    so 'groq', 'GROQ' and legacy 'GROQ_API_KEY' all resolve for provider 'groq'.
+    """
+    norm = _norm_key(provider_key)
+    wanted = {norm}
+    if norm in KEY_ALIASES:
+        wanted.add(KEY_ALIASES[norm])
+
+    # Try env vars first: known names for this provider, then the mechanical
+    # NAME_API_KEY derivation (plus aliases).
+    names = list(ENV_NAMES.get(norm, []))
+    names += [re.sub(r'[^A-Z0-9]+', '_', name.upper()) + "_API_KEY" for name in sorted(wanted)]
+    for env_var in names:
+        val = os.environ.get(env_var, "")
+        if val:
+            return val
+
+    # Fall back to settings.json api_keys section
+    api_keys = settings.get("api_keys", {})
+    for name in sorted(wanted):
+        val = _lookup_key(api_keys, name)
+        if val:
+            return val
+    # ... and the raw (un-aliased) provider key form as a last resort
+    return _lookup_key(api_keys, norm) or ""
+
+def pick_model(model_info, configured):
+    """Choose which model id to use for chat requests.
+
+    The `configured` name comes from data/models.json and may be synthesized
+    (e.g. '<provider>-free') rather than a real model id. Prefer it only if
+    the provider's own /models list confirms it; otherwise pick a real id from
+    that list (free-tier ids first). Falls back to `configured` when /models
+    is unavailable.
+    """
+    ids = [m.get("id") for m in model_info.get("models", []) if m.get("id")]
+    if not ids:
+        return configured, "configured (models endpoint unavailable)"
+    if configured in ids:
+        return configured, "configured (confirmed by /models)"
+    free = [i for i in ids if "free" in i.lower()]
+    if free:
+        return free[0], "auto-selected from /models (free tier)"
+    return ids[0], "auto-selected from /models"
+
+def run_test_for_provider(settings, provider_key, provider_data, context_sizes=None, rate_batch=None, rate_wait=None):
+    """Run all tests for a single provider.
+
+    Skips providers that don't have API keys configured (unless auth='none').
+    Security: credentials are only ever sent to a base_url that is either
+    verified in data/verified.json or on trust.TRUSTED_HOSTS. Scraped URLs
+    (data/models.json base_url comes from X posts) are never trusted with keys.
+    """
+    display = provider_data.get("display_name", provider_key)
+    raw_url = provider_data.get("base_url", "")
+    base_url, trusted, base_src = trust.trusted_base(
+        provider_data.get("provider", provider_key), raw_url, VERIFIED_BASES)
+
+    if not base_url or "PLACEHOLDER" in base_url or "example" in base_url:
+        return {
+            "provider": provider_key,
+            "display_name": display,
+            "skipped": True,
+            "reason": f"Invalid base_url: {base_url}"
+        }
+    if not trust.host_of(base_url):
+        return {
+            "provider": provider_key,
+            "display_name": display,
+            "skipped": True,
+            "reason": f"Refusing non-https base_url: {base_url}"
+        }
+
+    api_key = get_api_key(provider_key, provider_data, settings)
+    auth_type = provider_data.get("auth", "api_key")
+
+    if auth_type != "none" and not trusted:
+        return {
+            "provider": provider_key,
+            "display_name": display,
+            "skipped": True,
+            "reason": (f"Security: base_url host '{trust.host_of(base_url)}' is not a verified "
+                       f"first-party endpoint (scraped from X posts). Add an 'api_base_url' entry "
+                       f"for this provider to data/verified.json or trust.TRUSTED_HOSTS to test it."),
+            "base_url": base_url,
+        }
+
+>>>>>>> 382d5fc (minor modifications)
     # Skip providers that require auth but have no key
     if auth_type != "none" and not api_key:
         return {
             "provider": provider_key,
+<<<<<<< HEAD
             "display_name": provider_data.get("display_name", provider_key),
             "skipped": True,
             "reason": "API key not configured (no env var or settings.json entry)",
@@ -446,6 +684,50 @@ def run_test_for_provider(settings, provider_key, provider_data, context_sizes=N
     log(f"  Testing context limits for {provider_key}...")
     results["tests"]["context_limits"] = test_context_limits(provider_key, base_url, api_key, model_name, context_sizes)
     
+=======
+            "display_name": display,
+            "skipped": True,
+            "reason": "API key not configured (no env var or settings.json entry)",
+            "env_var": (ENV_NAMES.get(_norm_key(provider_key))
+                        or [re.sub(r'[^A-Z0-9]+', '_', _norm_key(provider_key).upper()) + "_API_KEY"])[0],
+        }
+
+    # Untrusted + keyless: probe without any credentials, and never attach one.
+    if not trusted:
+        api_key = ""
+
+    results = {
+        "provider": provider_key,
+        "display_name": display,
+        "base_url": base_url,
+        "base_url_source": base_src,
+        "auth": auth_type,
+        "tests": {}
+    }
+
+    # 0. Model info first (GET /models, no chat request) - its list of real
+    #    model ids drives which model every chat test below will target.
+    log(f"  Checking model info for {provider_key}...")
+    results["tests"]["model_info"] = test_model_info(provider_key, base_url, api_key)
+    model_name, model_src = pick_model(results["tests"]["model_info"],
+                                       provider_data.get("model_name") or "gpt-oss-120b")
+    results["model_used"] = model_name
+    results["model_source"] = model_src
+    log(f"  Model for tests: {model_name} [{model_src}]")
+
+    # 1. Auth test
+    log(f"  Testing auth for {provider_key}...")
+    results["tests"]["auth"] = test_auth(provider_key, base_url, api_key, provider_data.get("auth", "api_key"), model_name)
+
+    # 2. Basic prompt
+    log(f"  Testing basic prompt for {provider_key}...")
+    results["tests"]["basic_prompt"] = test_basic_prompt(provider_key, base_url, api_key, model_name)
+
+    # 3. Context limits
+    log(f"  Testing context limits for {provider_key}...")
+    results["tests"]["context_limits"] = test_context_limits(provider_key, base_url, api_key, model_name, context_sizes)
+
+>>>>>>> 382d5fc (minor modifications)
     # 4. Rate limits (only if auth works)
     if results["tests"]["auth"].get("valid_key_status") == 200:
         log(f"  Testing rate limits for {provider_key}...")
@@ -453,10 +735,13 @@ def run_test_for_provider(settings, provider_key, provider_data, context_sizes=N
     else:
         results["tests"]["rate_limits"] = {"skipped": True, "reason": "Auth not working (status {})".format(results["tests"]["auth"].get("valid_key_status"))}
     
+<<<<<<< HEAD
     # 5. Model info
     log(f"  Checking model info for {provider_key}...")
     results["tests"]["model_info"] = test_model_info(provider_key, base_url, api_key)
     
+=======
+>>>>>>> 382d5fc (minor modifications)
     # Compute usability score
     usability = 0
     max_usability = 5  # auth, basic, context, rate, model
@@ -487,7 +772,13 @@ def main():
     rate_wait = RATE_LIMIT_WAIT
     limit = None
     provider_filter = None
+<<<<<<< HEAD
     
+=======
+    test_all = False
+    keyless_only = False
+
+>>>>>>> 382d5fc (minor modifications)
     # Parse args
     args = sys.argv[1:]
     i = 0
@@ -504,6 +795,13 @@ def main():
             rate_batch = int(args[i + 1]); i += 2
         elif args[i] == "--rate-wait" and i + 1 < len(args):
             rate_wait = int(args[i + 1]); i += 2
+<<<<<<< HEAD
+=======
+        elif args[i] == "--all":
+            test_all = True; i += 1
+        elif args[i] == "--keyless":
+            keyless_only = True; i += 1
+>>>>>>> 382d5fc (minor modifications)
         elif args[i] == "--help":
             print(__doc__); sys.exit(0)
         else:
@@ -540,17 +838,38 @@ def main():
         else:
             providers_without_keys.append(pk)
     
+<<<<<<< HEAD
     # Default behavior: only test providers that have keys
     # Use --all to test everything (will fail for missing keys)
     should_test = providers_with_keys if not providers_without_keys else providers_with_keys
     
     if providers_without_keys and not provider_filter:
+=======
+    # Default behavior: only test providers that have keys (or need none).
+    # --all also probes key-requiring providers with no key (no-key behavior).
+    # --keyless tests ONLY auth=none providers: no credentials exist in the
+    # process, which makes it the safe mode for CI/GitHub Actions.
+    if keyless_only:
+        should_test = [pk for pk in providers_to_test
+                       if settings["models"][pk].get("auth", "api_key") == "none"]
+    else:
+        should_test = providers_to_test if test_all else providers_with_keys
+
+    if providers_without_keys and not provider_filter and not test_all and not keyless_only:
+>>>>>>> 382d5fc (minor modifications)
         print(f"Skipping {len(providers_without_keys)} providers without API keys:")
         for pk in providers_without_keys:
             env = f"{pk.upper()}_API_KEY"
             print(f"  - {pk} (set {env} or add to settings.json)")
         print()
     
+<<<<<<< HEAD
+=======
+    if not should_test and keyless_only:
+        print("No keyless providers configured (auth=none) - nothing to test.")
+        sys.exit(0)
+
+>>>>>>> 382d5fc (minor modifications)
     if not should_test:
         print("ERROR: No providers have API keys configured.")
         print("Set keys via environment variables:")
@@ -561,7 +880,11 @@ def main():
         print('  "groq": "gsk-...", "gemini": "...", "openrouter": "sk-or-..."')
         sys.exit(1)
     
+<<<<<<< HEAD
     log(f"Testing {len(should_test)} providers with keys: {', '.join(should_test)}")
+=======
+    log(f"Testing {len(should_test)} {'keyless' if keyless_only else 'keyed'} providers: {', '.join(should_test)}")
+>>>>>>> 382d5fc (minor modifications)
     log(f"Context sizes: {context_sizes}")
     log(f"Rate limit: {rate_batch} req/batch, {rate_wait}s between")
     log("")
@@ -717,11 +1040,20 @@ def main():
     log(f"Markdown report: {report_file}")
     
     # Quick summary
+<<<<<<< HEAD
     scores = [r.get('usability_score', 0) for r in all_results if not r.get('skipped')]
     if scores:
         log(f"\nAverage usability: {sum(scores)/len(scores):.1f}/10")
         best = max(all_results, key=lambda r: r.get('usability_score', 0))
         worst = min(all_results, key=lambda r: r.get('usability_score', 0))
+=======
+    tested = [r for r in all_results if not r.get('skipped')]
+    scores = [r.get('usability_score', 0) for r in tested]
+    if scores:
+        log(f"\nAverage usability: {sum(scores)/len(scores):.1f}/10")
+        best = max(tested, key=lambda r: r.get('usability_score', 0))
+        worst = min(tested, key=lambda r: r.get('usability_score', 0))
+>>>>>>> 382d5fc (minor modifications)
         log(f"Best: {best.get('display_name', best['provider'])} ({best['usability_score']})")
         log(f"Worst: {worst.get('display_name', worst['provider'])} ({worst['usability_score']})")
 
