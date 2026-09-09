@@ -3,15 +3,6 @@
 #
 # Replaces the previous version which had a hardcoded JSON blob.
 # This version runs the real discovery pipeline:
-<<<<<<< HEAD
-#   1. Scan x.pcstyle.dev for free-tier announcements
-#   2. Extract and verify provider info from posts
-#   3. Update data/models.json with real findings
-#   4. Update settings.json with verified models
-#
-# Usage:
-#   bash scripts/gather-llm-apis.sh [--force] [--queries queries.txt]
-=======
 #   1. Scan x.pcstyle.dev for free-tier announcements (leads, not facts)
 #   2. Extract provider info from posts
 #   3. Probe public model catalogs keylessly for ground truth (OpenRouter
@@ -25,7 +16,6 @@
 # --skip-x skips the X scan/extract steps (no browse-x helper, e.g. CI). The
 # pipeline then runs on existing X data plus the keyless live probes, which
 # need no credentials at all.
->>>>>>> 382d5fc (minor modifications)
 
 set -uo pipefail
 
@@ -38,19 +28,13 @@ MODELS_FILE="$DATA_DIR/models.json"
 
 FORCE=false
 QUERIES=""
-<<<<<<< HEAD
-=======
 SKIP_X=false
->>>>>>> 382d5fc (minor modifications)
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --force)   FORCE=true; shift ;;
         --queries) QUERIES="$2"; shift 2 ;;
-<<<<<<< HEAD
-=======
         --skip-x)  SKIP_X=true; shift ;;
->>>>>>> 382d5fc (minor modifications)
         *)         echo "Unknown: $1"; exit 1 ;;
     esac
 done
@@ -62,15 +46,6 @@ echo "Timestamp: $(date -Iseconds)"
 echo ""
 
 # Step 1: Run X scan if force or no data
-<<<<<<< HEAD
-if [ "$FORCE" = true ] || [ ! -f "$DATA_DIR/x-posts.json" ]; then
-    echo "Step 1: Scanning X for free LLM API announcements..."
-    
-    if [ -n "$QUERIES" ]; then
-        bash "$SCRIPT_DIR/x-scan.sh" --queries "$QUERIES" --sleep 25 --budget 600
-    else
-        bash "$SCRIPT_DIR/x-scan.sh" --sleep 25 --budget 600
-=======
 # Pacing is left at x-scan.sh's own default (60s): its measured behaviour
 # doc says faster hammering only extends the 429 cooldown.
 if [ "$SKIP_X" = true ]; then
@@ -97,28 +72,12 @@ elif [ "$FORCE" = true ] || [ ! -f "$DATA_DIR/x-posts.json" ]; then
     elif [ "$scan_rc" -ne 0 ]; then
         # rc=3 = some queries hit quota; data merged from previous runs is still usable
         echo "WARNING: x-scan.sh incomplete (rc=$scan_rc) - continuing with merged data" >&2
->>>>>>> 382d5fc (minor modifications)
     fi
     echo ""
 else
     echo "Step 1: X data already exists, skipping (use --force to re-scan)"
 fi
 
-<<<<<<< HEAD
-# Step 2: Extract leads from X posts
-echo "Step 2: Extracting provider leads..."
-python3 "$SCRIPT_DIR/x-extract.py" 2>/dev/null
-echo ""
-
-# Step 3: Build provider database from X findings
-echo "Step 3: Building provider database..."
-python3 "$SCRIPT_DIR/gather-x-apis.py"
-echo ""
-
-# Step 4: Update settings with verified models
-echo "Step 4: Updating settings.json..."
-python3 "$SCRIPT_DIR/update-settings.py"
-=======
 # Step 2: Extract leads from X posts (hard fail when X data exists to extract)
 if [ "$SKIP_X" != true ]; then
     echo "Step 2: Extracting provider leads..."
@@ -151,7 +110,6 @@ if ! python3 "$SCRIPT_DIR/update-settings.py"; then
     echo "ERROR: update-settings.py failed" >&2
     exit 1
 fi
->>>>>>> 382d5fc (minor modifications)
 echo ""
 
 echo "=== Discovery Complete ==="
