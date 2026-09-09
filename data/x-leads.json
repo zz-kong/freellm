@@ -1,0 +1,1473 @@
+{
+ "generated": "2026-09-08T16:01:23.247069+00:00",
+ "source": "x.pcstyle.dev",
+ "posts_scanned": 82,
+ "leads": [
+  {
+   "provider": "Ollama Cloud",
+   "confidence": 6,
+   "official_seen": false,
+   "post_count": 16,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [
+    "7 billion free tokens"
+   ],
+   "endpoints": [
+    "http://tokenrouter.com",
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "https://developers.cloudflare.com/workers-ai/",
+    "https://github.com/BerriAI/litel",
+    "https://github.com/BerriAI/litellm"
+   ],
+   "promo_window_signals": [
+    "ends",
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "developers.cloudflare.com",
+    "ollama.com",
+    "tokenrouter.com"
+   ],
+   "access_signals": [
+    "no card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [
+    "nothing leaves"
+   ],
+   "last_seen": "2026-09-08",
+   "evidence": [
+    {
+     "id": "2096550347389190557",
+     "url": "https://x.com/kaimarstonai/status/2096550347389190557",
+     "date": "2026-09-06",
+     "author": "kaimarstonai",
+     "followers": 0,
+     "views": 33636,
+     "likes": 419,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "credit limits ⏳ No hidden trials 🔒  Run them 100% locally on your machine—total privacy, zero latency, and $0 cost with open-source models.  💻 Local AI & LLMs  Ollama — Easy CLI to run local LLMs  llama.cpp — https://t.co/Q2AR7tQs1R"
+    },
+    {
+     "id": "2084613478741057891",
+     "url": "https://x.com/nahid_pro09/status/2084613478741057891",
+     "date": "Tue Aug 04",
+     "author": "nahid_pro09",
+     "followers": 0,
+     "views": 7089,
+     "likes": 71,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "nded for high-volume production workloads treat this as a testing/learning window.  source: http://tokenrouter.com (https://tokenrouter.com/)  OSS Alternative: Ollama (https://github.com/ollama/ollama) run Kimi-compatible or open-weight models locally with zero rate limits"
+    },
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": false,
+     "excerpt": "rojects, prototypes, and many small applications.  If you eventually need to run everything locally instead of using cloud APIs...  🖥️ Open Source Alternative: Ollama  Ollama lets you run open-source LLMs directly on your own machine.  It supports popular models like Kimi-K2.6, GLM-5.2, MiniMax, Dee"
+    },
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "lare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cloudflare.com/workers-ai/  Ollama  run open models directly on your computer no API bill for local inference works with tools like Claude Code and OpenCode  https://ol"
+    },
+    {
+     "id": "2097340935885492583",
+     "url": "https://x.com/JulianGoldieSEO/status/2097340935885492583",
+     "date": "2026-09-08",
+     "author": "JulianGoldieSEO",
+     "followers": 0,
+     "views": 753,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "is called Free LLM API and it lives on GitHub.  It gives you 7 billion free tokens a month.  You get 34 providers and 635 models in one place.  It runs Claude, Ollama, and Mistral for zero cost.  You will never hit a rate limit https://t.co/H3fMTsnv1G"
+    },
+    {
+     "id": "2082140022841495947",
+     "url": "https://x.com/Ryan95322865/status/2082140022841495947",
+     "date": "2026-07-28",
+     "author": "Ryan95322865",
+     "followers": 0,
+     "views": 392,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "$200/mo subscription stack. $0. No card.  Not a 7-day trial. Not \"subscribe to continue.\" Same tools devs actually ship with, local and cloud, free right now.  Ollama  run Llama 3.1, Mistral, Qwen locally. Free forever, no card, no rate https://t.co/a7yVJ1g2ER"
+    },
+    {
+     "id": "2097135218637357183",
+     "url": "https://x.com/webXOS_labs/status/2097135218637357183",
+     "date": "2026-09-08",
+     "author": "webXOS_labs",
+     "followers": 0,
+     "views": 309,
+     "likes": 6,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "LACK is SLACK for OLLAMA models: local usage and non stop looping. Always wanted your own team of agents?   It's easier than you think, and free. LACK makes it simple - one python megalith abstracts an endless number of @OLLAMA agents: https://t.co/7UroXSbJZL https://t.co/CES6SPRdUk"
+    },
+    {
+     "id": "2095886540220121285",
+     "url": "https://x.com/TheAIShrink/status/2095886540220121285",
+     "date": "2026-09-04",
+     "author": "TheAIShrink",
+     "followers": 0,
+     "views": 241,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@ycombinator @ollama @jmorgan Open source models are the free trial. Jeffrey Morgan isn’t counting users, he’s capturing switching costs before walled gardens notice what they already lost.  free is expensive once you’re locked in"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Google Gemini",
+   "confidence": 6,
+   "official_seen": false,
+   "post_count": 19,
+   "spam_heavy": false,
+   "context_candidates": [
+    131000
+   ],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "https://console.groq.com/",
+    "https://github.com/BerriAI/litellm",
+    "https://github.com/ollama/ollama",
+    "https://openrouter.ai/collections/free-models"
+   ],
+   "promo_window_signals": [
+    "through",
+    "until"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "console.groq.com",
+    "openrouter.ai",
+    "www.cerebras.ai"
+   ],
+   "access_signals": [
+    "api key",
+    "no card",
+    "no credit card"
+   ],
+   "privacy_risk_signals": [
+    "train on your prompts"
+   ],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-08",
+   "evidence": [
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": false,
+     "excerpt": "🚨 Google is quietly giving developers production-grade Gemini models—for free. 🤯  No credit card.  No trial.  Just generate an API key and start building.  Google's Gemini API Free Tier lets you access the same production-ready models used in real applications, making it one of the best ways to prot"
+    },
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "OpenRouter  hundreds of models through one API dedicated free models section great for testing different models  https://openrouter.ai/collections/free-models  Gemini API  free tier for selected models free input + output on eligible models rate limits apply  https://ai.google.dev/gemini-api/docs/pr"
+    },
+    {
+     "id": "1955011523518079388",
+     "url": "https://x.com/rahulpandey187/status/1955011523518079388",
+     "date": "2025-08-11",
+     "author": "rahulpandey187",
+     "followers": 0,
+     "views": 202,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "Built a free AI image generator that turns voice messages into art! 🗣️➡️🖼️ Talk to a Telegram bot, and it uses @GroqCloud for transcription, @GoogleAI's Gemini for prompt enhancement, and @HuggingFace to generate the image. All with free API tiers.  #AI #Automation #n8n #GenAI https://t.co/I6lS00chI"
+    },
+    {
+     "id": "2096968264987378049",
+     "url": "https://x.com/phpld/status/2096968264987378049",
+     "date": "2026-09-07",
+     "author": "phpld",
+     "followers": 0,
+     "views": 145,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@GoogleAIStudio When I start seeing clear indication that top people using Claude or ChatGPT are switching over I’ll try it too. Or maybe with a free allotment of credits"
+    },
+    {
+     "id": "2095572535488172089",
+     "url": "https://x.com/aiclawbots/status/2095572535488172089",
+     "date": "2026-09-03",
+     "author": "aiclawbots",
+     "followers": 0,
+     "views": 117,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "the free AI tiers that actually survived august  eight providers still offer a standing free tier with no card required:  1. google gemini api, current flash models, no card 2. groq, 30 requests a minute, 131k context on gpt-oss-120b 3. openrouter, 14 free models, up to 1m https://t.co/lm7mvwRnVo"
+    },
+    {
+     "id": "2081911241287893297",
+     "url": "https://x.com/aiseomastery/status/2081911241287893297",
+     "date": "Tue Jul 28",
+     "author": "aiseomastery",
+     "followers": 0,
+     "views": 93,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@QCXINT_ Free tier with no card, huge for prototyping"
+    },
+    {
+     "id": "2096138552606118029",
+     "url": "https://x.com/spectragai/status/2096138552606118029",
+     "date": "2026-09-05",
+     "author": "spectragai",
+     "followers": 0,
+     "views": 84,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@samsheffer @GoogleDeepMind @GoogleAIStudio Hi Sam.  In order to assess this properly I need to try it against MY repos.  I can’t do that with the very limited token allowance on antigravity.  Would really have been better to provide users with true free access so they can evaluate for YOU properly"
+    },
+    {
+     "id": "2096802185757487399",
+     "url": "https://x.com/TBKAskeladd/status/2096802185757487399",
+     "date": "2026-09-07",
+     "author": "TBKAskeladd",
+     "followers": 0,
+     "views": 77,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@GoogleAIStudio Nothing. Gemini flash models are useless for what I'd like to make unless you decide to give the image models a free tier again... Until then, Gemini 4 pro is long overdue."
+    }
+   ],
+   "verified": {
+    "status": "active",
+    "free_tier": {
+     "auth": "API key from AI Studio; no billing account required for free quota",
+     "limits_model": "RPM + TPM (input) + RPD, applied per project (not per key); RPD resets midnight Pacific; exact per-model numbers are only shown in AI Studio after login, not published in the docs",
+     "caveat": "docs state 'Specified rate limits are not guaranteed and actual capacity may vary'"
+    },
+    "privacy": {
+     "verdict": "risk_confirmed",
+     "detail": "Free quota counts as 'Unpaid Services': Google uses submitted content and responses to 'provide, improve, and develop' its products and ML technologies, and human reviewers may read/annotate inputs and outputs. Paid quota is the opposite: prompts/responses are not used to improve products.",
+     "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota",
+     "source": "https://ai.google.dev/gemini-api/terms",
+     "quote": "When you use Unpaid Services, including, for example, Google AI Studio and the unpaid quota on Gemini API, Google uses the content you submit to the Services and any generated responses to provide, improve, and develop Google products and services and machine learning technologies",
+     "secondary_source": "https://ai.google.dev/gemini-api/docs/logs-policy",
+     "secondary_quote": "By default, because logging is only available for billing-enabled projects, prompts and responses within logs are not used for product improvement or development"
+    },
+    "x_claim_verdict": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off."
+   },
+   "verification": "active",
+   "promo_expired": false
+  },
+  {
+   "provider": "Moonshot Kimi",
+   "confidence": 5.3,
+   "official_seen": false,
+   "post_count": 4,
+   "spam_heavy": false,
+   "context_candidates": [
+    1000000
+   ],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "http://tokenrouter.com",
+    "https://api.tokenrouter.com/v1\"",
+    "https://api.tokenrouter.com/v1/chat/completions",
+    "https://github.com/ollama/ollama",
+    "https://tokenrouter.com",
+    "https://tokenrouter.com/"
+   ],
+   "promo_window_signals": [
+    "ends",
+    "limited-time",
+    "through",
+    "until"
+   ],
+   "promo_end_dates": [
+    "2026-08-12"
+   ],
+   "domains": [
+    "api.tokenrouter.com",
+    "tokenrouter.com"
+   ],
+   "access_signals": [
+    "api key",
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-03",
+   "evidence": [
+    {
+     "id": "2095552339591430539",
+     "url": "https://x.com/zefirium/status/2095552339591430539",
+     "date": "2026-09-03",
+     "author": "zefirium",
+     "followers": 0,
+     "views": 9945,
+     "likes": 86,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "MiniMax M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8Ndp"
+    },
+    {
+     "id": "2084613478741057891",
+     "url": "https://x.com/nahid_pro09/status/2084613478741057891",
+     "date": "Tue Aug 04",
+     "author": "nahid_pro09",
+     "followers": 0,
+     "views": 7089,
+     "likes": 71,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": false,
+     "excerpt": "Kimi-K3 extended through august 12😳  If you have been sitting on the sidelines waiting to test a top-tier model without paying a dime, now is your window. freeKimi K3 gives you real access to a frontier-grade LLM through a simple API key no credit card, no subscription, no enterprise deal required  "
+    },
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "of using cloud APIs...  🖥️ Open Source Alternative: Ollama  Ollama lets you run open-source LLMs directly on your own machine.  It supports popular models like Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, Qwen, Gemma, gpt-oss, and many more.  🔥 Ollama Features  🏠 Run AI models locally with no cloud depend"
+    },
+    {
+     "id": "2084613724602786292",
+     "url": "https://x.com/nahid_pro09/status/2084613724602786292",
+     "date": "Tue Aug 04",
+     "author": "nahid_pro09",
+     "followers": 0,
+     "views": 308,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "website: https://tokenrouter.com  access moonshotai's kimi k3 with a massive 1m context window completely for free on tokenrouter  bookmark this and test a frontier-grade model without paying a dime before the promo expires  follow @nahid_pro09  for more free AI deals like this"
+    }
+   ],
+   "verified": {
+    "status": "expired",
+    "via": "tokenrouter.com (third-party reseller, not Moonshot first-party)",
+    "promo": {
+     "claim": "Free Kimi K3 access with a 1M context window",
+     "end": "2026-08-12",
+     "state": "expired ~4 weeks before the 2026-09-08 scan; must not be listed as an active free tier",
+     "corroboration": "https://www.nodeloc.com/t/topic/102092 (2026-08-04, independent of X): 'Free Kimi K3 extended until August 12'"
+    },
+    "privacy": {
+     "verdict": "unknown_third_party",
+     "detail": "The offer routes prompts through a third-party gateway, not Moonshot. Its logging/retention/training terms were not established by the X posts and must be read on the reseller's own site before use. Treat as untrusted for anything sensitive.",
+     "source": null
+    },
+    "x_claim_verdict": "Context length and promo end date were REAL but are now EXPIRED; privacy implication is the important part the post never mentioned (third-party routing)."
+   },
+   "verification": "expired",
+   "promo_expired": true
+  },
+  {
+   "provider": "OpenCode Zen",
+   "confidence": 5,
+   "official_seen": false,
+   "post_count": 6,
+   "spam_heavy": false,
+   "context_candidates": [
+    1000000
+   ],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://ollama.com/"
+   ],
+   "promo_window_signals": [
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "developers.cloudflare.com",
+    "ollama.com"
+   ],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-08",
+   "evidence": [
+    {
+     "id": "2095754421041033460",
+     "url": "https://x.com/sakatayasha/status/2095754421041033460",
+     "date": "2026-09-04",
+     "author": "sakatayasha",
+     "followers": 0,
+     "views": 8308,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "holy sh*t, it can't be f**king real   You can use Meta's Muse Spark 1.3 for FREEEEE on Opencode  Muse Spark 1.3 is Meta's frontier, proprietary multimodal reasoning AI model and heavily optimized for advanced coding  what it does:  - Muse Spark 1.3 free and no setup needed - full https://t.co/kuwhgn"
+    },
+    {
+     "id": "2095506864653894053",
+     "url": "https://x.com/CDGalpha/status/2095506864653894053",
+     "date": "2026-09-03",
+     "author": "CDGalpha",
+     "followers": 0,
+     "views": 7564,
+     "likes": 35,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "you can get Muse Spark 1.3 for completely free😱  long coding tasks can burn your API credits fast.  OpenCode just made Muse Spark 1.3 Contributor Free available at no token cost.  what you get:  • 1M-token context • up to 131K output • reasoning and tool calling • structured https://t.co/XHFLQmwBNj"
+    },
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "/developers.cloudflare.com/workers-ai/  Ollama  run open models directly on your computer no API bill for local inference works with tools like Claude Code and OpenCode  https://ollama.com/  you don’t need to subscribe to 10 different AI tools just to experiment  start with these.l  test the models "
+    },
+    {
+     "id": "2023001331594559796",
+     "url": "https://x.com/acoyfellow/status/2023001331594559796",
+     "date": "2026-02-15",
+     "author": "acoyfellow",
+     "followers": 0,
+     "views": 168,
+     "likes": 4,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "out chomp: an OpenAI-compatible proxy that routes to free LLM providers  Grab your keys from @GroqInc  @cerebras @SambaNovaAI @FireworksAI_HQ @openrouter and @OpenCode Zen..  A single endpoint to gobble up their free tokens 🍪  (also ships as an MCP server:"
+    },
+    {
+     "id": "2097337879962005973",
+     "url": "https://x.com/Kenichi_KNZW/status/2097337879962005973",
+     "date": "2026-09-08",
+     "author": "Kenichi_KNZW",
+     "followers": 0,
+     "views": 42,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "USBで持ち運べるHermes Agentを、できるだけ無料で止まりにくくしたい。  ローカルLLMだけでは持ち運び先PCの性能に左右される。 一方、無料APIだけに頼るとレート制限や障害で止まる。 そこで、Groq・OpenCode Free・Ollamaを組み合わせた自動切り替え構成を実際に組んで検証しました。"
+    },
+    {
+     "id": "2022639005557219581",
+     "url": "https://x.com/TommyFalkowski/status/2022639005557219581",
+     "date": "2026-02-14",
+     "author": "TommyFalkowski",
+     "followers": 0,
+     "views": 35,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@andreasklinger @badlogicgames @MiniMax_AI @openrouter @vercel @opencode Reminds me of my phone-coding free nights..."
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "OpenRouter",
+   "confidence": 5,
+   "official_seen": false,
+   "post_count": 11,
+   "spam_heavy": false,
+   "context_candidates": [
+    131000,
+    256000
+   ],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://console.groq.com/",
+    "https://openrouter.ai/collections/free-models"
+   ],
+   "promo_window_signals": [
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "console.groq.com",
+    "openrouter.ai"
+   ],
+   "access_signals": [
+    "no card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-04",
+   "evidence": [
+    {
+     "id": "2023464643495371012",
+     "url": "https://x.com/Kailzer/status/2023464643495371012",
+     "date": "2026-02-16",
+     "author": "Kailzer",
+     "followers": 0,
+     "views": 2971,
+     "likes": 26,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@openrouter @MiniMax_AI most devs dont need frontier reasoning. they need good enough at basically free. thats the gap MiniMax walked straight through and OpenClaw riding on top of it proves the point. the killer apps are being built on the cheapest capable model not the most expensive one"
+    },
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "stop paying for every AI API you want to test 👀  there are actually a lot of good options you can use for $0 right now  here are 7 worth bookmarking:  OpenRouter  hundreds of models through one API dedicated free models section great for testing different models  https://openrouter.ai/collections/fr"
+    },
+    {
+     "id": "2023456534076739869",
+     "url": "https://x.com/Kaancang1/status/2023456534076739869",
+     "date": "2026-02-16",
+     "author": "Kaancang1",
+     "followers": 0,
+     "views": 1215,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@kira_daruma @openrouter @MiniMax_AI Everyone wants to use it for free, but I'm not asking about that. When it becomes paid, will there be people who continue to use it via the API or membership?"
+    },
+    {
+     "id": "2022654299176854006",
+     "url": "https://x.com/hey_apurv/status/2022654299176854006",
+     "date": "2026-02-14",
+     "author": "hey_apurv",
+     "followers": 0,
+     "views": 715,
+     "likes": 5,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@MiniMax_AI You can now try Minimax 2.5 on @usecloudclaw for @openclaw ai agents  ps: there are more free models available via @openrouter  also, check my latest article for a gift https://t.co/wOMgViT56n"
+    },
+    {
+     "id": "2022654016971575489",
+     "url": "https://x.com/hey_apurv/status/2022654016971575489",
+     "date": "2026-02-14",
+     "author": "hey_apurv",
+     "followers": 0,
+     "views": 532,
+     "likes": 5,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "@MiniMax_AI You can now try Minimax 2.5 on @usecloudclaw for @openclaw ai agents  ps: there are more free models available via @openrouter   also, check my latest article for a gift https://t.co/KbHmj8IrI0"
+    },
+    {
+     "id": "2023415607400779964",
+     "url": "https://x.com/lucas_ghae/status/2023415607400779964",
+     "date": "2026-02-16",
+     "author": "lucas_ghae",
+     "followers": 0,
+     "views": 376,
+     "likes": 3,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "p-3.5-flash is insane ⚡️  115 tok/s • 256K context • 100% uptime 196B MoE reasoning model  @openclaw uses it most (183B tokens) rock solid. Completely free on @openrouter  https://t.co/1AZaSnmPEO"
+    },
+    {
+     "id": "2022812293059293624",
+     "url": "https://x.com/domhfr/status/2022812293059293624",
+     "date": "2026-02-14",
+     "author": "domhfr",
+     "followers": 0,
+     "views": 222,
+     "likes": 5,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "penClaw.  Not building a unicorn. Not training a model. Just debugging workflows.  Hot take: that would have been 260$ in Claude api costs, wouldn’t it be for @openrouter and it’s free models!"
+    },
+    {
+     "id": "2023001331594559796",
+     "url": "https://x.com/acoyfellow/status/2023001331594559796",
+     "date": "2026-02-15",
+     "author": "acoyfellow",
+     "followers": 0,
+     "views": 168,
+     "likes": 4,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "check out chomp: an OpenAI-compatible proxy that routes to free LLM providers  Grab your keys from @GroqInc  @cerebras @SambaNovaAI @FireworksAI_HQ @openrouter and @OpenCode Zen..  A single endpoint to gobble up their free tokens 🍪  (also ships as an MCP server:"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Groq",
+   "confidence": 4.7,
+   "official_seen": false,
+   "post_count": 5,
+   "spam_heavy": false,
+   "context_candidates": [
+    131000
+   ],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://console.groq.com/",
+    "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "https://www.cerebras.ai/pricing"
+   ],
+   "promo_window_signals": [],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "console.groq.com",
+    "docs.mistral.ai",
+    "www.cerebras.ai"
+   ],
+   "access_signals": [
+    "no card",
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-08",
+   "evidence": [
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "free-models  Gemini API  free tier for selected models free input + output on eligible models rate limits apply  https://ai.google.dev/gemini-api/docs/pricing  Groq  free developer tier insanely fast inference access to models like GPT-OSS and Qwen  https://console.groq.com/  Cerebras  $5 free API c"
+    },
+    {
+     "id": "1955011523518079388",
+     "url": "https://x.com/rahulpandey187/status/1955011523518079388",
+     "date": "2025-08-11",
+     "author": "rahulpandey187",
+     "followers": 0,
+     "views": 202,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "Built a free AI image generator that turns voice messages into art! 🗣️➡️🖼️ Talk to a Telegram bot, and it uses @GroqCloud for transcription, @GoogleAI's Gemini for prompt enhancement, and @HuggingFace to generate the image. All with free API tiers.  #AI #Automation #n8n #GenAI https://t.co/I6lS00chI"
+    },
+    {
+     "id": "2023001331594559796",
+     "url": "https://x.com/acoyfellow/status/2023001331594559796",
+     "date": "2026-02-15",
+     "author": "acoyfellow",
+     "followers": 0,
+     "views": 168,
+     "likes": 4,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "check out chomp: an OpenAI-compatible proxy that routes to free LLM providers  Grab your keys from @GroqInc  @cerebras @SambaNovaAI @FireworksAI_HQ @openrouter and @OpenCode Zen..  A single endpoint to gobble up their free tokens 🍪  (also ships as an MCP server:"
+    },
+    {
+     "id": "2095572535488172089",
+     "url": "https://x.com/aiclawbots/status/2095572535488172089",
+     "date": "2026-09-03",
+     "author": "aiclawbots",
+     "followers": 0,
+     "views": 117,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "that actually survived august  eight providers still offer a standing free tier with no card required:  1. google gemini api, current flash models, no card 2. groq, 30 requests a minute, 131k context on gpt-oss-120b 3. openrouter, 14 free models, up to 1m https://t.co/lm7mvwRnVo"
+    },
+    {
+     "id": "2097337879962005973",
+     "url": "https://x.com/Kenichi_KNZW/status/2097337879962005973",
+     "date": "2026-09-08",
+     "author": "Kenichi_KNZW",
+     "followers": 0,
+     "views": 42,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "USBで持ち運べるHermes Agentを、できるだけ無料で止まりにくくしたい。  ローカルLLMだけでは持ち運び先PCの性能に左右される。 一方、無料APIだけに頼るとレート制限や障害で止まる。 そこで、Groq・OpenCode Free・Ollamaを組み合わせた自動切り替え構成を実際に組んで検証しました。"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Mistral AI",
+   "confidence": 4.0,
+   "official_seen": false,
+   "post_count": 3,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [
+    "7 billion free tokens"
+   ],
+   "endpoints": [
+    "https://console.groq.com/",
+    "https://developers.cloudflare.com/wo",
+    "https://developers.cloudflare.com/workers-ai/",
+    "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "https://www.cerebras.ai/pricing"
+   ],
+   "promo_window_signals": [
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "console.groq.com",
+    "developers.cloudflare.com",
+    "docs.mistral.ai",
+    "www.cerebras.ai"
+   ],
+   "access_signals": [
+    "no card",
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-08",
+   "evidence": [
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "S and Qwen  https://console.groq.com/  Cerebras  $5 free API credits very fast inference great for experimenting with AI apps  https://www.cerebras.ai/pricing  Mistral  free API mode no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio"
+    },
+    {
+     "id": "2097340935885492583",
+     "url": "https://x.com/JulianGoldieSEO/status/2097340935885492583",
+     "date": "2026-09-08",
+     "author": "JulianGoldieSEO",
+     "followers": 0,
+     "views": 753,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "ee LLM API and it lives on GitHub.  It gives you 7 billion free tokens a month.  You get 34 providers and 635 models in one place.  It runs Claude, Ollama, and Mistral for zero cost.  You will never hit a rate limit https://t.co/H3fMTsnv1G"
+    },
+    {
+     "id": "2082140022841495947",
+     "url": "https://x.com/Ryan95322865/status/2082140022841495947",
+     "date": "2026-07-28",
+     "author": "Ryan95322865",
+     "followers": 0,
+     "views": 392,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "ack. $0. No card.  Not a 7-day trial. Not \"subscribe to continue.\" Same tools devs actually ship with, local and cloud, free right now.  Ollama  run Llama 3.1, Mistral, Qwen locally. Free forever, no card, no rate https://t.co/a7yVJ1g2ER"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Cloudflare Workers AI",
+   "confidence": 4,
+   "official_seen": false,
+   "post_count": 7,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://developers.cloudflare.com/workers-ai/",
+    "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "https://ollama.com/"
+   ],
+   "promo_window_signals": [
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "developers.cloudflare.com",
+    "docs.mistral.ai",
+    "ollama.com"
+   ],
+   "access_signals": [
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-08-27",
+   "evidence": [
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": false,
+     "excerpt": "e API mode no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key  Cloudflare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cl"
+    },
+    {
+     "id": "2092992042712306010",
+     "url": "https://x.com/painn_x/status/2092992042712306010",
+     "date": "Thu Aug 27",
+     "author": "painn_x",
+     "followers": 0,
+     "views": 63,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed they’re all goated"
+    },
+    {
+     "id": "2092991376921071645",
+     "url": "https://x.com/avosuai/status/2092991376921071645",
+     "date": "Thu Aug 27",
+     "author": "avosuai",
+     "followers": 0,
+     "views": 56,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed Worth checking out. Thanks for sharing kadd"
+    },
+    {
+     "id": "2093002582222348576",
+     "url": "https://x.com/undefinedKi/status/2093002582222348576",
+     "date": "Thu Aug 27",
+     "author": "undefinedKi",
+     "followers": 0,
+     "views": 41,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed nice list bro, bookmarked"
+    },
+    {
+     "id": "2092997695644270800",
+     "url": "https://x.com/federicodonaton/status/2092997695644270800",
+     "date": "Thu Aug 27",
+     "author": "federicodonaton",
+     "followers": 0,
+     "views": 34,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed Free model routes are most useful when builders can compare capability and latency before committing budget. A single API across options makes that evaluation cleaner. Glad to connect"
+    },
+    {
+     "id": "2093018608393650372",
+     "url": "https://x.com/MAXdeg0/status/2093018608393650372",
+     "date": "Thu Aug 27",
+     "author": "MAXdeg0",
+     "followers": 0,
+     "views": 30,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed Thanks for bringing this to my tl"
+    },
+    {
+     "id": "2093031741145350588",
+     "url": "https://x.com/DGlushakov41949/status/2093031741145350588",
+     "date": "Thu Aug 27",
+     "author": "DGlushakov41949",
+     "followers": 0,
+     "views": 12,
+     "likes": 0,
+     "spam_flag": false,
+     "reply": true,
+     "full": true,
+     "windowed": false,
+     "excerpt": "@kaddisdeployed kadd this is a solid list. the shift to open models is real, I saw Vercel data showing 62% of token volume now goes to open models. weve been routing more through our own platform to avoid per-provider billing."
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Z AI",
+   "confidence": 3.7,
+   "official_seen": true,
+   "post_count": 2,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [
+    "limited-time"
+   ],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-03",
+   "evidence": [
+    {
+     "id": "2095552339591430539",
+     "url": "https://x.com/zefirium/status/2095552339591430539",
+     "date": "2026-09-03",
+     "author": "zefirium",
+     "followers": 0,
+     "views": 9945,
+     "likes": 86,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "MiniMax M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8Ndp"
+    },
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "oud APIs...  🖥️ Open Source Alternative: Ollama  Ollama lets you run open-source LLMs directly on your own machine.  It supports popular models like Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, Qwen, Gemma, gpt-oss, and many more.  🔥 Ollama Features  🏠 Run AI models locally with no cloud dependency.  ⚡ Op"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Qwen",
+   "confidence": 3.0,
+   "official_seen": false,
+   "post_count": 3,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://ai.google.dev/gemini-api/docs/pricing",
+    "https://console.groq.com/",
+    "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "https://www.cerebras.ai/pricing"
+   ],
+   "promo_window_signals": [],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "console.groq.com",
+    "docs.mistral.ai",
+    "www.cerebras.ai"
+   ],
+   "access_signals": [
+    "no card",
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-08-27",
+   "evidence": [
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "Alternative: Ollama  Ollama lets you run open-source LLMs directly on your own machine.  It supports popular models like Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, Qwen, Gemma, gpt-oss, and many more.  🔥 Ollama Features  🏠 Run AI models locally with no cloud dependency.  ⚡ OpenAI-compatible REST API.  🐳"
+    },
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "le models rate limits apply  https://ai.google.dev/gemini-api/docs/pricing  Groq  free developer tier insanely fast inference access to models like GPT-OSS and Qwen  https://console.groq.com/  Cerebras  $5 free API credits very fast inference great for experimenting with AI apps  https://www.cerebra"
+    },
+    {
+     "id": "2082140022841495947",
+     "url": "https://x.com/Ryan95322865/status/2082140022841495947",
+     "date": "2026-07-28",
+     "author": "Ryan95322865",
+     "followers": 0,
+     "views": 392,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "No card.  Not a 7-day trial. Not \"subscribe to continue.\" Same tools devs actually ship with, local and cloud, free right now.  Ollama  run Llama 3.1, Mistral, Qwen locally. Free forever, no card, no rate https://t.co/a7yVJ1g2ER"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Cerebras",
+   "confidence": 2.7,
+   "official_seen": false,
+   "post_count": 2,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [
+    "https://console.groq.com/",
+    "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
+    "https://www.cerebras.ai/pricing"
+   ],
+   "promo_window_signals": [
+    "through"
+   ],
+   "promo_end_dates": [],
+   "domains": [
+    "ai.google.dev",
+    "console.groq.com",
+    "developers.cloudflare.com",
+    "docs.mistral.ai",
+    "www.cerebras.ai"
+   ],
+   "access_signals": [
+    "no credit card"
+   ],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-08-27",
+   "evidence": [
+    {
+     "id": "2092990800573415636",
+     "url": "https://x.com/kaddisdeployed/status/2092990800573415636",
+     "date": "Thu Aug 27",
+     "author": "kaddisdeployed",
+     "followers": 0,
+     "views": 1558,
+     "likes": 14,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "to models like GPT-OSS and Qwen  https://console.groq.com/  Cerebras  $5 free API credits very fast inference great for experimenting with AI apps  https://www.cerebras.ai/pricing  Mistral  free API mode no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-start"
+    },
+    {
+     "id": "2023001331594559796",
+     "url": "https://x.com/acoyfellow/status/2023001331594559796",
+     "date": "2026-02-15",
+     "author": "acoyfellow",
+     "followers": 0,
+     "views": 168,
+     "likes": 4,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "check out chomp: an OpenAI-compatible proxy that routes to free LLM providers  Grab your keys from @GroqInc  @cerebras @SambaNovaAI @FireworksAI_HQ @openrouter and @OpenCode Zen..  A single endpoint to gobble up their free tokens 🍪  (also ships as an MCP server:"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "DeepSeek",
+   "confidence": 2.0,
+   "official_seen": false,
+   "post_count": 3,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [
+    "limited-time"
+   ],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-05",
+   "evidence": [
+    {
+     "id": "2081876460089082017",
+     "url": "https://x.com/QCXINT_/status/2081876460089082017",
+     "date": "Mon Jul 27",
+     "author": "QCXINT_",
+     "followers": 0,
+     "views": 5219,
+     "likes": 42,
+     "spam_flag": false,
+     "reply": false,
+     "full": true,
+     "windowed": true,
+     "excerpt": "en Source Alternative: Ollama  Ollama lets you run open-source LLMs directly on your own machine.  It supports popular models like Kimi-K2.6, GLM-5.2, MiniMax, DeepSeek, Qwen, Gemma, gpt-oss, and many more.  🔥 Ollama Features  🏠 Run AI models locally with no cloud dependency.  ⚡ OpenAI-compatible RE"
+    },
+    {
+     "id": "2096208159270441425",
+     "url": "https://x.com/MR_0FFICIALL/status/2096208159270441425",
+     "date": "2026-09-05",
+     "author": "MR_0FFICIALL",
+     "followers": 0,
+     "views": 315,
+     "likes": 32,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "𝗗𝗲𝗲𝗽𝗦𝗲𝗲𝗸 𝗩𝟰 𝗚𝗼𝘁 𝗠𝗼𝗿𝗲 𝗘𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲. 𝗕.𝗔𝗜 𝗝𝘂𝘀𝘁 𝗠𝗮𝗱𝗲 𝗩𝟰-𝗙𝗹𝗮𝘀𝗵 𝗙𝗿𝗲𝗲  DeepSeek-V4 has officially increased its pricing.  But at the same time, https://t.co/bhV5HbjB5e has opened DeepSeek-V4-Flash for limited-time free access.  And the https://t.co/1xEgez60XD"
+    },
+    {
+     "id": "2096244753100615972",
+     "url": "https://x.com/Quinmooda/status/2096244753100615972",
+     "date": "2026-09-05",
+     "author": "Quinmooda",
+     "followers": 0,
+     "views": 122,
+     "likes": 1,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "𝗗𝗲𝗲𝗽𝗦𝗲𝗲𝗸 𝗩𝟰 𝗜𝘀 𝗠𝗼𝗿𝗲 𝗘𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲. 𝗕𝘂𝘁 𝗕.𝗔𝗜 𝗝𝘂𝘀𝘁 𝗠𝗮𝗱𝗲 𝗩𝟰-𝗙𝗹𝗮𝘀𝗵 𝗘𝗮𝘀𝗶𝗲𝗿 𝘁𝗼 𝗧𝗿𝘆. ⚡  DeepSeek-V4 has officially moved to higher pricing.  At the same time, https://t.co/FXfjXxkOzL is offering DeepSeek-V4-Flash with limited-time"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Sarvam AI",
+   "confidence": 0.3,
+   "official_seen": false,
+   "post_count": 1,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-05",
+   "evidence": [
+    {
+     "id": "2096138888251375848",
+     "url": "https://x.com/buzzy_bit/status/2096138888251375848",
+     "date": "2026-09-05",
+     "author": "buzzy_bit",
+     "followers": 0,
+     "views": 102541,
+     "likes": 515,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "Since a lot of you asked for it, here's my Sarvam AI interview experience https://t.co/Q6HQPiZWdb"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "NVIDIA NIM",
+   "confidence": 0.3,
+   "official_seen": false,
+   "post_count": 1,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [
+    "limited-time"
+   ],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-09-03",
+   "evidence": [
+    {
+     "id": "2095552339591430539",
+     "url": "https://x.com/zefirium/status/2095552339591430539",
+     "date": "2026-09-03",
+     "author": "zefirium",
+     "followers": 0,
+     "views": 9945,
+     "likes": 86,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "x M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8NdpaKRz"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "SambaNova",
+   "confidence": 0.3,
+   "official_seen": false,
+   "post_count": 1,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2026-02-15",
+   "evidence": [
+    {
+     "id": "2023001331594559796",
+     "url": "https://x.com/acoyfellow/status/2023001331594559796",
+     "date": "2026-02-15",
+     "author": "acoyfellow",
+     "followers": 0,
+     "views": 168,
+     "likes": 4,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": false,
+     "excerpt": "check out chomp: an OpenAI-compatible proxy that routes to free LLM providers  Grab your keys from @GroqInc  @cerebras @SambaNovaAI @FireworksAI_HQ @openrouter and @OpenCode Zen..  A single endpoint to gobble up their free tokens 🍪  (also ships as an MCP server:"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  },
+  {
+   "provider": "Hugging Face",
+   "confidence": 0.3,
+   "official_seen": false,
+   "post_count": 1,
+   "spam_heavy": false,
+   "context_candidates": [],
+   "rpm": [],
+   "rpd": [],
+   "free_token_claims": [],
+   "endpoints": [],
+   "promo_window_signals": [],
+   "promo_end_dates": [],
+   "domains": [],
+   "access_signals": [],
+   "privacy_risk_signals": [],
+   "privacy_positive_signals": [],
+   "last_seen": "2025-08-11",
+   "evidence": [
+    {
+     "id": "1955011523518079388",
+     "url": "https://x.com/rahulpandey187/status/1955011523518079388",
+     "date": "2025-08-11",
+     "author": "rahulpandey187",
+     "followers": 0,
+     "views": 202,
+     "likes": 2,
+     "spam_flag": false,
+     "reply": false,
+     "full": false,
+     "windowed": true,
+     "excerpt": "or that turns voice messages into art! 🗣️➡️🖼️ Talk to a Telegram bot, and it uses @GroqCloud for transcription, @GoogleAI's Gemini for prompt enhancement, and @HuggingFace to generate the image. All with free API tiers.  #AI #Automation #n8n #GenAI https://t.co/I6lS00chI1"
+    }
+   ],
+   "verified": null,
+   "verification": "unverified",
+   "promo_expired": false
+  }
+ ]
+}

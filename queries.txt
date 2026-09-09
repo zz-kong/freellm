@@ -1,0 +1,10 @@
+# one query per line; '#' = comment. Do NOT use from: (returns 0 results anonymously).
+free LLM API
+free tier API no credit card
+free API credits limited time
+free API training data privacy
+@OpenRouterAI free
+@GroqCloud free
+@GoogleAIStudio free
+@ollama free
+free API since:2026-09-01

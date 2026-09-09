@@ -1,0 +1,40 @@
+{
+  "_note": "Manually verified facts with citations. x-extract.py merges these onto X-derived leads. Keep quotes verbatim and dated - promotions and terms change.",
+  "as_of": "2026-09-08",
+  "providers": {
+    "Google Gemini": {
+      "status": "active",
+      "free_tier": {
+        "auth": "API key from AI Studio; no billing account required for free quota",
+        "limits_model": "RPM + TPM (input) + RPD, applied per project (not per key); RPD resets midnight Pacific; exact per-model numbers are only shown in AI Studio after login, not published in the docs",
+        "caveat": "docs state 'Specified rate limits are not guaranteed and actual capacity may vary'"
+      },
+      "privacy": {
+        "verdict": "risk_confirmed",
+        "detail": "Free quota counts as 'Unpaid Services': Google uses submitted content and responses to 'provide, improve, and develop' its products and ML technologies, and human reviewers may read/annotate inputs and outputs. Paid quota is the opposite: prompts/responses are not used to improve products.",
+        "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota",
+        "source": "https://ai.google.dev/gemini-api/terms",
+        "quote": "When you use Unpaid Services, including, for example, Google AI Studio and the unpaid quota on Gemini API, Google uses the content you submit to the Services and any generated responses to provide, improve, and develop Google products and services and machine learning technologies",
+        "secondary_source": "https://ai.google.dev/gemini-api/docs/logs-policy",
+        "secondary_quote": "By default, because logging is only available for billing-enabled projects, prompts and responses within logs are not used for product improvement or development"
+      },
+      "x_claim_verdict": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off."
+    },
+    "Moonshot Kimi": {
+      "status": "expired",
+      "via": "tokenrouter.com (third-party reseller, not Moonshot first-party)",
+      "promo": {
+        "claim": "Free Kimi K3 access with a 1M context window",
+        "end": "2026-08-12",
+        "state": "expired ~4 weeks before the 2026-09-08 scan; must not be listed as an active free tier",
+        "corroboration": "https://www.nodeloc.com/t/topic/102092 (2026-08-04, independent of X): 'Free Kimi K3 extended until August 12'"
+      },
+      "privacy": {
+        "verdict": "unknown_third_party",
+        "detail": "The offer routes prompts through a third-party gateway, not Moonshot. Its logging/retention/training terms were not established by the X posts and must be read on the reseller's own site before use. Treat as untrusted for anything sensitive.",
+        "source": null
+      },
+      "x_claim_verdict": "Context length and promo end date were REAL but are now EXPIRED; privacy implication is the important part the post never mentioned (third-party routing)."
+    }
+  }
+}

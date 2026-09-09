@@ -1,0 +1,29 @@
+# Settings with API keys (contains secrets - user must provide their own)
+settings.json
+settings.json.backup.*
+
+# Backup of old fabricated data (kept for review, not part of project)
+data/fabricated-backup/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment variables with keys
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*~

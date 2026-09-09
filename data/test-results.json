@@ -1,0 +1,412 @@
+{
+  "test_run": {
+    "timestamp": "2026-09-09T01:28:32.549073+00:00",
+    "providers_tested": 1,
+    "context_sizes": [
+      "short",
+      "medium",
+      "long",
+      "max"
+    ],
+    "rate_limit_params": {
+      "batch": 10,
+      "wait_seconds": 2
+    }
+  },
+  "results": [
+    {
+      "provider": "groq",
+      "display_name": "Groq",
+      "base_url": "https://api.groq.com/openai/v1",
+      "auth": "api_key",
+      "tests": {
+        "auth": {
+          "provider": "groq",
+          "auth_type": "api_key",
+          "key_configured": true,
+          "valid_key_status": 200,
+          "invalid_key_status": 401,
+          "no_key_status": 401,
+          "key_error_messages": {
+            "invalid": "Invalid API Key",
+            "no_key": "Invalid API Key"
+          },
+          "valid_key_latency_ms": 550.8,
+          "invalid_key_latency_ms": 155.9,
+          "no_key_latency_ms": 147.5
+        },
+        "basic_prompt": {
+          "provider": "groq",
+          "basic_prompt": {
+            "status": 200,
+            "latency_ms": 510.9,
+            "has_choices": true,
+            "error": null,
+            "response_length": 0,
+            "model_name": "openai/gpt-oss-120b",
+            "usage": {
+              "queue_time": 0.2136558,
+              "prompt_tokens": 72,
+              "prompt_time": 0.002634559,
+              "completion_tokens": 20,
+              "completion_time": 0.042088643,
+              "total_tokens": 92,
+              "total_time": 0.044723202,
+              "completion_tokens_details": {
+                "reasoning_tokens": 18
+              }
+            }
+          }
+        },
+        "context_limits": {
+          "provider": "groq",
+          "tests": [
+            {
+              "size_label": "short",
+              "approx_words": 100,
+              "status": 200,
+              "latency_ms": 716.0,
+              "worked": true,
+              "error": null,
+              "response_tokens": 0
+            },
+            {
+              "size_label": "medium",
+              "approx_words": 1000,
+              "status": 200,
+              "latency_ms": 1021.5,
+              "worked": true,
+              "error": null,
+              "response_tokens": 0
+            },
+            {
+              "size_label": "long",
+              "approx_words": 10000,
+              "status": 413,
+              "latency_ms": 409.3,
+              "worked": false,
+              "error": "HTTP 413",
+              "response_tokens": 0
+            },
+            {
+              "size_label": "max",
+              "approx_words": 50000,
+              "status": 400,
+              "latency_ms": 307.1,
+              "worked": false,
+              "error": "Please reduce the length of the messages or completion.",
+              "response_tokens": 0
+            }
+          ],
+          "max_working_context": 1000
+        },
+        "rate_limits": {
+          "provider": "groq",
+          "batches": [
+            {
+              "batch": 1,
+              "requests": [
+                {
+                  "request": 0,
+                  "status": 200,
+                  "latency_ms": 250.6,
+                  "success": true
+                },
+                {
+                  "request": 1,
+                  "status": 200,
+                  "latency_ms": 657.7,
+                  "success": true
+                },
+                {
+                  "request": 2,
+                  "status": 200,
+                  "latency_ms": 257.2,
+                  "success": true
+                },
+                {
+                  "request": 3,
+                  "status": 200,
+                  "latency_ms": 235.0,
+                  "success": true
+                },
+                {
+                  "request": 4,
+                  "status": 200,
+                  "latency_ms": 528.9,
+                  "success": true
+                },
+                {
+                  "request": 5,
+                  "status": 200,
+                  "latency_ms": 714.3,
+                  "success": true
+                },
+                {
+                  "request": 6,
+                  "status": 200,
+                  "latency_ms": 715.9,
+                  "success": true
+                },
+                {
+                  "request": 7,
+                  "status": 200,
+                  "latency_ms": 512.1,
+                  "success": true
+                },
+                {
+                  "request": 8,
+                  "status": 200,
+                  "latency_ms": 612.5,
+                  "success": true
+                },
+                {
+                  "request": 9,
+                  "status": 200,
+                  "latency_ms": 613.8,
+                  "success": true
+                }
+              ],
+              "success": 10,
+              "total": 10
+            },
+            {
+              "batch": 2,
+              "requests": [
+                {
+                  "request": 10,
+                  "status": 200,
+                  "latency_ms": 558.2,
+                  "success": true
+                },
+                {
+                  "request": 11,
+                  "status": 200,
+                  "latency_ms": 597.0,
+                  "success": true
+                },
+                {
+                  "request": 12,
+                  "status": 200,
+                  "latency_ms": 630.7,
+                  "success": true
+                },
+                {
+                  "request": 13,
+                  "status": 200,
+                  "latency_ms": 406.6,
+                  "success": true
+                },
+                {
+                  "request": 14,
+                  "status": 200,
+                  "latency_ms": 717.4,
+                  "success": true
+                },
+                {
+                  "request": 15,
+                  "status": 200,
+                  "latency_ms": 615.6,
+                  "success": true
+                },
+                {
+                  "request": 16,
+                  "status": 200,
+                  "latency_ms": 552.4,
+                  "success": true
+                },
+                {
+                  "request": 17,
+                  "status": 200,
+                  "latency_ms": 569.7,
+                  "success": true
+                },
+                {
+                  "request": 18,
+                  "status": 200,
+                  "latency_ms": 615.2,
+                  "success": true
+                },
+                {
+                  "request": 19,
+                  "status": 200,
+                  "latency_ms": 305.6,
+                  "success": true
+                }
+              ],
+              "success": 10,
+              "total": 10
+            },
+            {
+              "batch": 3,
+              "requests": [
+                {
+                  "request": 20,
+                  "status": 200,
+                  "latency_ms": 865.4,
+                  "success": true
+                },
+                {
+                  "request": 21,
+                  "status": 200,
+                  "latency_ms": 613.3,
+                  "success": true
+                },
+                {
+                  "request": 22,
+                  "status": 200,
+                  "latency_ms": 408.8,
+                  "success": true
+                },
+                {
+                  "request": 23,
+                  "status": 200,
+                  "latency_ms": 613.9,
+                  "success": true
+                },
+                {
+                  "request": 24,
+                  "status": 200,
+                  "latency_ms": 557.6,
+                  "success": true
+                },
+                {
+                  "request": 25,
+                  "status": 200,
+                  "latency_ms": 567.3,
+                  "success": true
+                },
+                {
+                  "request": 26,
+                  "status": 200,
+                  "latency_ms": 511.5,
+                  "success": true
+                },
+                {
+                  "request": 27,
+                  "status": 200,
+                  "latency_ms": 308.0,
+                  "success": true
+                },
+                {
+                  "request": 28,
+                  "status": 429,
+                  "latency_ms": 230.3,
+                  "success": false,
+                  "retry_after": "2"
+                },
+                {
+                  "request": 29,
+                  "status": 429,
+                  "latency_ms": 278.8,
+                  "success": false
+                }
+              ],
+              "success": 8,
+              "total": 10
+            }
+          ],
+          "first_429_at": null,
+          "total_success": 28,
+          "first_429_at_request": 28,
+          "first_429_at_batch": 3,
+          "success_rate": 0.966
+        },
+        "model_info": {
+          "provider": "groq",
+          "models": [
+            {
+              "id": "meta-llama/llama-prompt-guard-2-86m",
+              "object": "model",
+              "owned_by": "Meta",
+              "created": 1748632165
+            },
+            {
+              "id": "canopylabs/orpheus-v1-english",
+              "object": "model",
+              "owned_by": "Canopy Labs",
+              "created": 1766186316
+            },
+            {
+              "id": "openai/gpt-oss-20b",
+              "object": "model",
+              "owned_by": "OpenAI",
+              "created": 1754407957
+            },
+            {
+              "id": "whisper-large-v3-turbo",
+              "object": "model",
+              "owned_by": "OpenAI",
+              "created": 1728413088
+            },
+            {
+              "id": "allam-2-7b",
+              "object": "model",
+              "owned_by": "SDAIA",
+              "created": 1737672203
+            },
+            {
+              "id": "openai/gpt-oss-safeguard-20b",
+              "object": "model",
+              "owned_by": "OpenAI",
+              "created": 1761708789
+            },
+            {
+              "id": "groq/compound-mini",
+              "object": "model",
+              "owned_by": "Groq",
+              "created": 1756949707
+            },
+            {
+              "id": "groq/compound",
+              "object": "model",
+              "owned_by": "Groq",
+              "created": 1756949530
+            },
+            {
+              "id": "qwen/qwen3.6-27b",
+              "object": "model",
+              "owned_by": "Alibaba Cloud",
+              "created": 1778288776
+            },
+            {
+              "id": "openai/gpt-oss-120b",
+              "object": "model",
+              "owned_by": "OpenAI",
+              "created": 1754408224
+            },
+            {
+              "id": "meta-llama/llama-prompt-guard-2-22m",
+              "object": "model",
+              "owned_by": "Meta",
+              "created": 1748632101
+            },
+            {
+              "id": "canopylabs/orpheus-arabic-saudi",
+              "object": "model",
+              "owned_by": "Canopy Labs",
+              "created": 1765926439
+            },
+            {
+              "id": "qwen/qwen3.8-27b",
+              "object": "model",
+              "owned_by": "Alibaba Cloud",
+              "created": 1786984846
+            },
+            {
+              "id": "whisper-large-v3",
+              "object": "model",
+              "owned_by": "OpenAI",
+              "created": 1693721698
+            }
+          ],
+          "status": 200,
+          "latency_ms": 306.2,
+          "total_models": 14
+        }
+      },
+      "usability_score": 10.0,
+      "usability_label": "✅ Excellent"
+    }
+  ]
+}
