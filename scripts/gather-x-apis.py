@@ -1,24 +1,12 @@
 #!/usr/bin/env python3
 """gather-x-apis.py - replace the hardcoded known-apis.json with real X-scraped data.
 
-<<<<<<< HEAD
-Reads data/x-leads.json and data/verified.json, then emits:
-=======
 Reads data/x-leads.json, data/verified.json and (when present) data/probes.json
 from the keyless live discovery, then emits:
->>>>>>> 382d5fc (minor modifications)
   - data/raw/known-apis.json  (machine-readable provider list)
   - data/models.json          (normalized model database)
   - docs/models.md            (human-readable documentation)
 
-<<<<<<< HEAD
-Only includes providers with a verification status of "verified" or "active".
-Unverified providers are included but flagged.
-
-This replaces the previous script which just hardcoded a JSON blob.
-"""
-import json, os, re, sys, html, datetime
-=======
 X leads are the discovery surface; live probes supply real model ids and
 free-catalog facts; verified.json is the only source allowed to define a
 base_url that may receive API keys. Entries carry 'verified_at' so staleness
@@ -26,64 +14,16 @@ older than STALE_DAYS days is flagged instead of silently trusted.
 """
 import json, os, re, sys, html, datetime
 import trust
->>>>>>> 382d5fc (minor modifications)
 
 BASE = os.path.dirname(os.path.abspath(os.path.join(__file__, '..')))
 LEADS = os.path.join(BASE, 'data', 'x-leads.json')
 VERIFIED = os.path.join(BASE, 'data', 'verified.json')
-<<<<<<< HEAD
-=======
 PROBES = os.path.join(BASE, 'data', 'probes.json')
 STALE_DAYS = 30
->>>>>>> 382d5fc (minor modifications)
 MODELS_FILE = os.path.join(BASE, 'data', 'models.json')
 KNOWN_FILE = os.path.join(BASE, 'data', 'raw', 'known-apis.json')
 DOCS_FILE = os.path.join(BASE, 'docs', 'models.md')
 
-<<<<<<< HEAD
-# Map provider names (from x-leads) to canonical data
-# We only include providers that were found on X AND optionally verified.
-# For known providers without X coverage, we can hardcode a minimal record.
-KNOWN_ADDITIONS = {
-    "Ollama": {
-        "base_url": "https://cloud.ollama.com/v1",
-        "models": [{"name": "ollama/free-7b", "context": 131072, "output": 4096}],
-        "auth": "api_key", "free_tier": True,
-        "rate_limits": {"requests_per_minute": 10, "requests_per_day": 500},
-        "cost": "free",
-        "capabilities": {"tool_calling": False, "vision": False},
-        "privacy": {"logs_prompts": False, "use_for_training": False}
-    },
-    "SiliconFlow": {
-        "base_url": "https://api.siliconflow.cn/v1",
-        "models": [{"name": "free-mixtral-8x7b", "context": 32768, "output": 4096}],
-        "auth": "api_key", "free_tier": True,
-        "rate_limits": {"requests_per_minute": 20, "requests_per_day": 1000},
-        "cost": "free",
-        "capabilities": {"tool_calling": True, "vision": False},
-        "privacy": {"logs_prompts": True, "use_for_training": False}
-    },
-    "Cerebras": {
-        "base_url": "https://api.cerebras.ai/v1",
-        "models": [{"name": "warp-1", "context": 131072, "output": 131072}],
-        "auth": "api_key", "free_tier": True,
-        "rate_limits": {"requests_per_minute": 60},
-        "cost": "free",
-        "capabilities": {"tool_calling": True, "vision": False},
-        "privacy": {"logs_prompts": True, "use_for_training": False}
-    }
-}
-
-
-def load():
-    leads = json.load(open(LEADS))['leads']
-    verified = json.load(open(VERIFIED)).get('providers', {})
-    return leads, verified
-
-
-def build_provider(leads, verified):
-    """Build a provider record from X leads + verification data."""
-=======
 # No hardcoded provider records in this script. The original hardcode here
 # was fabricated by an early LLM pass (dead host cloud.ollama.com, invented
 # model ids like "ollama/free-7b"/"warp-1", invented rate limits and privacy
@@ -159,7 +99,6 @@ def promo_from(lead, v):
 
 def build_provider(leads, verified, probes):
     """Build a provider record from X leads + verification data + live probes."""
->>>>>>> 382d5fc (minor modifications)
     providers = []
 
     for lead in leads:
@@ -187,13 +126,6 @@ def build_provider(leads, verified, probes):
         if priv.get('regional_exception'):
             privacy["regional_exception"] = priv['regional_exception']
 
-<<<<<<< HEAD
-        # Build from leads
-        models = []
-        for ctx in lead.get('context_candidates', []):
-            models.append({
-                "name": f"{std.lower().replace(' ', '-')}-free",
-=======
         # Build from leads. Model ids are NOT confirmed real ids (X posts
         # rarely name them), so mark them and test-apis.py re-derives a real
         # one from the provider's /models endpoint. Context that was never
@@ -204,23 +136,16 @@ def build_provider(leads, verified, probes):
             models.append({
                 "name": synth_name,
                 "name_verified": False,
->>>>>>> 382d5fc (minor modifications)
                 "context": ctx,
                 "output": ctx // 2,
                 "modality": "text"
             })
         if not models:
             models.append({
-<<<<<<< HEAD
-                "name": f"{std.lower().replace(' ', '-')}-free",
-                "context": 131072,
-                "output": 8192,
-=======
                 "name": synth_name,
                 "name_verified": False,
                 "context": None,
                 "output": None,
->>>>>>> 382d5fc (minor modifications)
                 "modality": "text"
             })
 
@@ -228,32 +153,12 @@ def build_provider(leads, verified, probes):
         endpoints = []
         for ev in lead.get('evidence', [])[:5]:
             text = ev.get('excerpt', '') + ' ' + ev.get('url', '')
-<<<<<<< HEAD
-            for m in re.finditer(r'https?://(?:[a-z0-9-]+\.)+(?:com|ai|io|dev|cloud)\b[^\s,)]*', text, re.I):
-                u = m.group(0).rstrip('.,;')
-=======
             for m in re.finditer(r'https?://(?:[a-z0-9-]+\.)+(?:com|ai|io|dev|cloud)\b[^\s,)"\'>]*', text, re.I):
                 u = m.group(0).rstrip('.,;"\'')
->>>>>>> 382d5fc (minor modifications)
                 if 'x.com/' not in u and 't.co/' not in u:
                     endpoints.append(u)
         endpoints = list(dict.fromkeys(endpoints))[:3]
 
-<<<<<<< HEAD
-        provider = {
-            "provider": std,
-            "name": std,
-            "base_url": endpoints[0] if endpoints else f"https://api.{std.lower().replace(' ', '')}.com/v1",
-            "models": models,
-            "auth": "api_key",
-            "free_tier": True,
-            "rate_limits": {},
-            "cost": "free",
-            "capabilities": {"tool_calling": True, "vision": True},
-            "privacy": privacy,
-            # X discovery provenance
-            "_source": "x_scan",
-=======
         # Base URL policy: NEVER guess a domain (a guessed https://api.<name>.com
         # is an uncontrolled destination for users' API keys). Order of trust:
         #   1. api_base_url manually verified in data/verified.json
@@ -293,7 +198,6 @@ def build_provider(leads, verified, probes):
             "_source": "x_scan",
             "_base_url_source": base_src,
             "_mentioned_urls": mentioned,
->>>>>>> 382d5fc (minor modifications)
             "_x_posts": lead.get('post_count', 0),
             "_confidence": lead.get('confidence', 0),
             "_verified_status": status,
@@ -306,8 +210,6 @@ def build_provider(leads, verified, probes):
         if lead.get('rpd'):
             provider["rate_limits"]["requests_per_day"] = lead['rpd'][0]
 
-<<<<<<< HEAD
-=======
         # Auth is verified.json's to declare - a public /models list never
         # infers keyless access (see note below). '"auth": "none"' set here is
         # the ONLY channel by which a card can ever become keyless.
@@ -319,25 +221,12 @@ def build_provider(leads, verified, probes):
         if v.get('source'):
             provider["_verified_source"] = v['source']
 
->>>>>>> 382d5fc (minor modifications)
         # Add verification note
         if v.get('x_claim_verdict'):
             provider["_claim_verdict"] = v['x_claim_verdict']
         if priv.get('quote'):
             provider["_privacy_quote"] = priv['quote']
 
-<<<<<<< HEAD
-        providers.append(provider)
-
-    # Add known providers without X coverage
-    for std, data in KNOWN_ADDITIONS.items():
-        if not any(p.get('provider') == std for p in providers):
-            provider = {'provider': std, 'name': std}
-            provider.update(data)
-            provider['_source'] = 'hand_verified'
-            provider['_verified_status'] = 'unverified'
-            providers.append(provider)
-=======
         # Structured promo window + manual-verification date
         promo = promo_from(lead, v)
         if promo:
@@ -469,13 +358,10 @@ def build_provider(leads, verified, probes):
                         "checked_at": pentry.get('checked_at'),
                         "real_model_ids": True},
         })
->>>>>>> 382d5fc (minor modifications)
 
     return providers
 
 
-<<<<<<< HEAD
-=======
 def promo_text(p):
     """One-line promo status: end date with live countdown, or None."""
     promo = p.get('_promo')
@@ -515,7 +401,6 @@ def staleness(p):
     return note
 
 
->>>>>>> 382d5fc (minor modifications)
 def write_known(providers):
     """Write raw known-apis.json."""
     with open(KNOWN_FILE, 'w') as f:
@@ -527,14 +412,11 @@ def write_models(providers):
     """Write normalized data/models.json."""
     models = []
     for p in providers:
-<<<<<<< HEAD
-=======
         # The cited privacy quote lives at record level for lead merges; the
         # site drawer reads privacy.quote, so fold it in here.
         priv = dict(p.get('privacy') or {})
         if p.get('_privacy_quote'):
             priv.setdefault('quote', p['_privacy_quote'])
->>>>>>> 382d5fc (minor modifications)
         models.append({
             "provider": p.get('provider','?'),
             "name": p.get('name',p.get('provider','?')),
@@ -545,13 +427,6 @@ def write_models(providers):
             "rate_limits": p.get('rate_limits',{}),
             "capabilities": p.get('capabilities',{'tool_calling':True,'vision':True}),
             "cost": p.get('cost','free'),
-<<<<<<< HEAD
-            "privacy": p.get('privacy',{}),
-            "status": p.get('_verified_status','unverified'),
-            "verified_from_x": p.get('_source') == 'x_scan',
-            "context_from_x": p.get('_x_posts',0),
-            "promo_warning": p.get('_claim_verdict'),
-=======
             "privacy": priv,
             "status": p.get('_verified_status','unverified'),
             "verified_from_x": p.get('_source') == 'x_scan',
@@ -564,7 +439,6 @@ def write_models(providers):
             "mentioned_urls": p.get('_mentioned_urls', []),
             "notes": p.get('_notes'),
             "source": p.get('_verified_source'),
->>>>>>> 382d5fc (minor modifications)
         })
     with open(MODELS_FILE, 'w') as f:
         json.dump(models, f, indent=2, ensure_ascii=False)
@@ -587,16 +461,9 @@ def write_docs(providers):
     ]
 
     for i, p in enumerate(providers, 1):
-<<<<<<< HEAD
-        ctx = ', '.join(f"{m.get('context','?')} tokens" for m in p.get('models',[])[:1]) or '-'
-        promo = p.get('_promo_end')
-        if promo:
-            promo = ', '.join(promo) + (' ⚠️ EXPIRED' if p.get('_verified_status') == 'expired' else '')
-=======
         ctx = ', '.join(f"{m['context']} tokens" if m.get('context') else 'unknown'
                         for m in p.get('models', [])[:1]) or '-'
         promo = promo_text(p)
->>>>>>> 382d5fc (minor modifications)
         lines.append(f'| {i} | {p["provider"]} | {p.get("_verified_status","unverified")} | {ctx} | {promo or "-"} | {p["auth"]} |')
 
     lines.extend(['', ''])
@@ -605,23 +472,17 @@ def write_docs(providers):
         lines += [
             f'## {i}. {p["provider"]}', '',
             f'- **Status**: `{p.get("_verified_status","unverified")}`',
-<<<<<<< HEAD
-            f'- **Base URL**: `{p["base_url"]}`',
-=======
             f'- **Base URL**: `{p["base_url"] or "unknown - not confirmed from any evidence"}`',
             ('  > ⚠️ This base URL was scraped from a post - verify it on the provider\'s own site before sending any API key.'
              if p.get('_base_url_source') == 'x_scraped' else ''),
             (f'  > Other URLs quoted in the posts did not match this provider\'s name and are NOT credited as its endpoint: '
              + ', '.join(f'`{u}`' for u in p.get('_mentioned_urls', [])[:3])
              if not p.get('base_url') and p.get('_mentioned_urls') else ''),
->>>>>>> 382d5fc (minor modifications)
             f'- **Auth**: {p["auth"]}',
             f'- **Rate Limits**: {json.dumps(p["rate_limits"]) or "N/A"}',
             '',
         ]
 
-<<<<<<< HEAD
-=======
         # Promo window with live countdown
         promo = promo_text(p)
         if promo:
@@ -642,7 +503,6 @@ def write_docs(providers):
                          f'`{probed.get("status","?")}`{real}')
             lines.append('')
 
->>>>>>> 382d5fc (minor modifications)
         # Claims from X
         claim = p.get('_claim_verdict')
         if claim:
@@ -673,14 +533,10 @@ def write_docs(providers):
         # Models
         lines.append('### Models')
         for m in p.get('models', []):
-<<<<<<< HEAD
-            lines.append(f'- `{m.get("name","?")}` — Context: `{m.get("context","?")}`, Output: `{m.get("output","?")}`')
-=======
             ctx = m.get('context') if m.get('context') else 'unknown'
             out = m.get('output') if m.get('output') else 'unknown'
             note = '' if m.get('name_verified') else ' _(inferred id - confirm via /models)_'
             lines.append(f'- `{m.get("name","?")}` — Context: `{ctx}`, Output: `{out}`{note}')
->>>>>>> 382d5fc (minor modifications)
         lines.append('')
 
         provenance = []
@@ -688,11 +544,8 @@ def write_docs(providers):
             provenance.append(f"Discovered via X ({p.get('_x_posts',0)} posts)")
         if p.get('_source') == 'hand_verified':
             provenance.append("Manual verification")
-<<<<<<< HEAD
-=======
         if p.get('_source') == 'live_probe':
             provenance.append("Discovered via keyless live probe")
->>>>>>> 382d5fc (minor modifications)
         if provenance:
             lines.append(f'*Source: {", ".join(provenance)}*')
             lines.append('')
@@ -705,13 +558,8 @@ def write_docs(providers):
 
 
 def main():
-<<<<<<< HEAD
-    leads, verified = load()
-    providers = build_provider(leads, verified)
-=======
     leads, verified, probes = load()
     providers = build_provider(leads, verified, probes)
->>>>>>> 382d5fc (minor modifications)
     write_known(providers)
     write_models(providers)
     write_docs(providers)

@@ -4,14 +4,6 @@ This project discovers, validates, and documents free LLM APIs. It's designed to
 
 ## Features
 
-<<<<<<< HEAD
-- ✅ Discover free LLM APIs from multiple providers
-- ✅ Gather model information (context length, rate limits, privacy)
-- ✅ Test API usability automatically
-- ✅ Publish documentation to GitHub Pages or Cloudflare Pages
-- ✅ Update project settings.json with verified models
-- ✅ Generate searchable HTML documentation
-=======
 - ✅ Discover free LLM APIs from multiple sources: X-post scanning, **keyless live probes**, and hand-verified records
 - ✅ Gather model information (context length, rate limits, privacy)
 - ✅ **Confirm endpoints with zero credentials**: the OpenRouter free-model catalog and first-party `/models` endpoints are probed without any API key
@@ -21,7 +13,6 @@ This project discovers, validates, and documents free LLM APIs. It's designed to
 - ✅ Publish a searchable, **filterable** site to GitHub Pages (No key needed / No training / 128K+ context / Live-confirmed / Promo active)
 - ✅ Flag hand-verified facts that go **stale** (docs warn once `verified_at` is older than 30 days)
 - ✅ Update project settings.json with verified models
->>>>>>> 382d5fc (minor modifications)
 - ✅ Track reliability scores for each API
 
 ## Project Structure
@@ -30,24 +21,13 @@ This project discovers, validates, and documents free LLM APIs. It's designed to
 freellm/
 ├── data/              # Data storage
 │   ├── raw/          # Raw API responses
-<<<<<<< HEAD
-=======
 │   ├── verified.json # Hand-verified provider records (+ verified_at dates)
 │   ├── x-leads.json  # Raw leads scraped from X (optional source)
 │   ├── probes.json   # Keyless live-probe results (auto-generated)
->>>>>>> 382d5fc (minor modifications)
 │   ├── models.json   # Structured model database (auto-generated)
 │   └── test-results.json # API test results (auto-generated)
 ├── docs/             # Documentation
 │   ├── models.md     # Markdown documentation (auto-generated)
-<<<<<<< HEAD
-│   └── site/         # Static HTML site (generated)
-├── logs/             # Test logs
-├── scripts/          # Pipeline scripts
-│   ├── gather-llm-apis.sh   # Discover and gather APIs
-│   ├── test-apis.sh         # Test API usability
-│   ├── publish-docs.sh      # Publish to GitHub Pages/Cloudflare Pages
-=======
 │   └── site/         # Static HTML site (generated, deployed to GitHub Pages)
 ├── logs/             # Test logs
 ├── .github/workflows/
@@ -59,7 +39,6 @@ freellm/
 │   ├── trust.py             # First-party host allowlist / trust decisions
 │   ├── test-apis.sh         # Test API usability (--keyless for CI-safe mode)
 │   ├── publish-docs.sh      # Generate docs/models.md + docs/site/
->>>>>>> 382d5fc (minor modifications)
 │   └── update-settings.sh   # Update settings.json
 ├── models/           # Custom model configurations
 ├── tests/            # Test scripts
@@ -75,12 +54,6 @@ freellm/
 cd /data/data/com.termux/files/home/freellm
 
 # Step 1: Discover free LLM APIs
-<<<<<<< HEAD
-bash scripts/gather-llm-apis.sh --force
-
-# Step 2: Test APIs (optional, for verification)
-bash scripts/test-apis.sh
-=======
 #   Add --skip-x to skip the X-post scan (no browse-x login needed;
 #   discovery then runs on keyless live probes + verified.json only)
 bash scripts/gather-llm-apis.sh --force
@@ -88,7 +61,6 @@ bash scripts/gather-llm-apis.sh --force
 # Step 2: Test APIs (optional, for verification)
 #   --keyless tests only providers that need no API key - this is what CI runs
 bash scripts/test-apis.sh --keyless
->>>>>>> 382d5fc (minor modifications)
 
 # Step 3: Publish documentation
 bash scripts/publish-docs.sh
@@ -97,8 +69,6 @@ bash scripts/publish-docs.sh
 bash scripts/update-settings.sh
 ```
 
-<<<<<<< HEAD
-=======
 ## Discovery Sources
 
 Three independent sources feed `data/models.json`, in order of trust:
@@ -127,7 +97,6 @@ card. A public `/models` listing does **not** prove keyless chat works - LLM7's
 listing is public but its chat endpoint returns 401 without a key, and it is
 scored accordingly.
 
->>>>>>> 382d5fc (minor modifications)
 ## Supported Free API Providers
 
 ### Verified Providers
@@ -158,8 +127,6 @@ For a better experience, view the interactive HTML site:
 termux-open docs/site/index.html
 ```
 
-<<<<<<< HEAD
-=======
 Each provider card shows its trust signals (verified / probed / scraped URL
 warning, promo countdown, last live-test score, privacy chips, verification
 age). **Click a card header to expand it**: the details drawer lists the
@@ -170,7 +137,6 @@ Use the search box plus the five filter chips - **No key needed**,
 **No training on prompts** (verified terms only), **128K+ context**,
 **Live-confirmed**, **Promo active now** - all client-side, combinable.
 
->>>>>>> 382d5fc (minor modifications)
 ## API Testing
 
 Run API tests to verify functionality:
@@ -184,12 +150,9 @@ bash scripts/test-apis.sh --model "gpt-oss-120b"
 
 # Test limited number
 bash scripts/test-apis.sh --limit 5
-<<<<<<< HEAD
-=======
 
 # Keyless mode only: providers with auth="none" - safe to run on CI
 bash scripts/test-apis.sh --keyless
->>>>>>> 382d5fc (minor modifications)
 ```
 
 Test results are stored in:
@@ -228,8 +191,6 @@ Edit `settings.json` to add your API keys:
 }
 ```
 
-<<<<<<< HEAD
-=======
 ## Security Model
 
 Your API keys are only ever sent to **https** endpoints that are either:
@@ -260,7 +221,6 @@ ollama.com, opencode.ai/zen and llm7.io all reject chat without a key while
 their listings are open, and those providers are scored and labeled honestly
 as a result.
 
->>>>>>> 382d5fc (minor modifications)
 ## Privacy Notes
 
 ⚠️ **Important**: When using free APIs:
@@ -273,72 +233,6 @@ as a result.
 
 Always review provider terms of service before production use.
 
-<<<<<<< HEAD
-## Custom APIs
-
-To add custom API providers:
-
-1. Create `data/custom-apis.json`
-2. Add your provider configuration:
-
-```json
-[
-  {
-    "provider": "MyCustomAPI",
-    "name": "My Custom API",
-    "base_url": "https://api.example.com/v1",
-    "models": [
-      {"name": "custom-model-1", "context": 100000, "output": 10000, "modality": "text"}
-    ],
-    "auth": "api_key",
-    "free_tier": true,
-    "rate_limits": {"requests_per_minute": 100},
-    "capabilities": {"tool_calling": true, "vision": false}
-  }
-]
-```
-
-3. Run `bash scripts/gather-llm-apis.sh`
-
-## CI/CD Integration
-
-Add this to your `.github/workflows/`:
-
-```yaml
-name: Free LLM API Discovery
-
-on:
-  schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
-
-jobs:
-  discover-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup
-        run: |
-          curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-          sudo apt-get install -y nodejs jq
-      - name: Discover APIs
-        run: bash scripts/gather-llm-apis.sh
-      - name: Test APIs
-        run: bash scripts/test-apis.sh
-      - name: Publish Docs
-        run: bash scripts/publish-docs.sh
-      - name: Update Settings
-        run: bash scripts/update-settings.sh
-      - name: Commit Changes
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add .
-          git commit -m 'Update free LLM API data' || echo 'No changes'
-          git push
-```
-
-=======
 ## Adding a provider by hand
 
 There is one manual entry point: **`data/verified.json`**. It is the
@@ -430,6 +324,11 @@ bash scripts/test-apis.sh --provider "NVIDIA NIM"   # only if you set that key
 `.github/workflows/discover-and-publish.yml` is a working workflow, checked in:
 
 - **Runs daily** (06:30 UTC) and on manual dispatch.
+- **Manual runs have a "skip discovery" toggle** (`skip_discovery`): check it
+  and the run skips probes, gather and live tests entirely, building the
+  static page straight from the `data/` files already committed to the repo.
+  Use it to republish a corrected `verified.json` or card layout without
+  waiting on live endpoints. The daily schedule always runs full discovery.
 - `gather-llm-apis.sh --skip-x` (no X login in CI; probes + verified.json only),
   then `test-apis.py --keyless` (only `auth=none` providers), then
   `publish-docs.sh`.
@@ -443,7 +342,6 @@ To go live: push the repo to GitHub, then in **Settings → Pages** set *Source*
 to **GitHub Actions** and open the **Actions** tab and enable workflows. The
 site URL appears on the workflow run summary after the first deploy.
 
->>>>>>> 382d5fc (minor modifications)
 ## Dependencies
 
 - **jq** - JSON processor (`pkg install jq`)

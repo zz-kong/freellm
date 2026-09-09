@@ -8,12 +8,19 @@
 #     compromised workflow cannot leak an API key - none exist in the runner.
 #   - docs/site/index.html is deployed as a Pages artifact; it is generated
 #     fresh every run and never trusted from the repo.
+#   - "Run workflow" with skip_discovery checked republishes the static page
+#     straight from the committed data/ - no probes, no gather, no tests.
 name: Discover & publish free LLM APIs
 
 on:
   schedule:
     - cron: '30 6 * * *'   # daily 06:30 UTC
   workflow_dispatch:
+    inputs:
+      skip_discovery:
+        description: 'Publish the static page from the committed data/ only - no probes, no re-gather, no live tests'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -38,9 +45,11 @@ jobs:
         run: sudo apt-get update -q && sudo apt-get install -yq jq
 
       - name: Discovery pipeline (keyless probes; X scan skipped)
+        if: ${{ inputs.skip_discovery != true }}
         run: bash scripts/gather-llm-apis.sh --skip-x
 
       - name: Live-test keyless providers only (no credentials in CI)
+        if: ${{ inputs.skip_discovery != true }}
         run: python3 scripts/test-apis.py --keyless
         continue-on-error: true   # provider outages must not block publishing
 

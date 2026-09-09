@@ -37,15 +37,6 @@ mkdir -p "$SITE_DIR"
 echo "=== Building Documentation Site ==="
 
 # Generate HTML from data/models.json + verified.json
-<<<<<<< HEAD
-python3 - <<'PYEOF'
-import json, os, datetime
-
-BASE = "/data/data/com.termux/files/home/freellm"
-models = json.load(open(os.path.join(BASE, "data/models.json")))
-verified = json.load(open(os.path.join(BASE, "data/verified.json"))).get("providers", {})
-xfindings = open(os.path.join(BASE, "docs/x-findings.md")).read()
-=======
 export BASE_DIR
 python3 - <<'PYEOF'
 import json, os, html, datetime, re
@@ -74,15 +65,10 @@ for r in testres.get("results", []):
         "ok": bool(r.get("tests", {}).get("basic_prompt", {})
                      .get("basic_prompt", {}).get("has_choices")),
     }
->>>>>>> 382d5fc (minor modifications)
 
 verified_count = sum(1 for m in models if m.get("status") in ("verified", "active"))
 unverified = sum(1 for m in models if m.get("status") not in ("verified", "active", "expired"))
 expired = sum(1 for m in models if m.get("status") == "expired")
-<<<<<<< HEAD
-
-now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-=======
 keyless = sum(1 for m in models if m.get("auth") == "none")
 
 now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
@@ -121,7 +107,6 @@ def privacy_chips(m):
     if not known:
         chips.append('<span class="chip chip-unknown">❓ privacy unconfirmed</span>')
     return "".join(chips), known
->>>>>>> 382d5fc (minor modifications)
 
 # Build provider cards
 cards = ""
@@ -132,15 +117,6 @@ for m in models:
     ctx = m.get("rate_limits", {}).get("requests_per_minute", "?") or "?"
     auth = m.get("auth", "?")
     caps = m.get("capabilities", {})
-<<<<<<< HEAD
-    cap_str = "Tool" if caps.get("tool_calling") else ""
-    if caps.get("vision"): cap_str += ", Vision"
-    
-    # Status icon
-    if status == "verified":
-        icon = "✅"
-    elif status == "active":
-=======
     cap_tool = bool(caps.get("tool_calling"))
     cap_vision = bool(caps.get("vision"))
     for mm in m.get("models", [])[:8]:   # per-model probe facts can confirm too
@@ -153,28 +129,11 @@ for m in models:
     if status == "verified":
         icon = "✅"
     elif status in ("active", "probed"):
->>>>>>> 382d5fc (minor modifications)
         icon = "🟢"
     elif status == "expired":
         icon = "❌"
     else:
         icon = "⚪"
-<<<<<<< HEAD
-    
-    cards += f"""    <div class="card" data-name="{provider.lower()}" data-provider="{provider.lower()}">
-      <div class="card-header">
-        <span class="card-name">{provider}</span>
-        <span class="badge badge-{status}">{icon} {status}</span>
-      </div>
-      <div class="card-body">
-        <p><strong>Base URL:</strong> <code>{base_url}</code></p>
-        <p><strong>Auth:</strong> {auth} | <strong>Rate:</strong> {ctx} RPM</p>
-        <p><strong>Capabilities:</strong> {cap_str or "N/A"}</p>
-      </div>
-    </div>"""
-
-# Verified providers detail
-=======
 
     promo, promo_active = promo_line(m)
     chips, privacy_ok = privacy_chips(m)
@@ -301,24 +260,11 @@ for m in models:
 
 # Verified providers detail - renders data/verified.json as written (the
 # manual-add surface: what a human checked, against which source, when).
->>>>>>> 382d5fc (minor modifications)
 verified_detail = ""
 for std, vdata in verified.items():
     priv = vdata.get("privacy", {})
     quote = priv.get("quote", "")
     claim = vdata.get("x_claim_verdict", "")
-<<<<<<< HEAD
-    verified_detail += f"""
-    <details>
-      <summary><strong>{std}</strong> — {vdata.get('status', 'unverified')}</summary>
-      {f'<p><strong>Privacy:</strong> {priv.get("detail", priv.get("quote", "Not verified"))}</p>' if priv.get('detail') else ''}
-      {f'<blockquote>{quote}</blockquote>' if quote else ''}
-      {f'<p><strong>Claim verdict:</strong> {claim}</p>' if claim else ''}
-    </details>"""
-
-# Markdown body from x-findings
-md_body = xfindings.replace("`", "&grave;")
-=======
     std_e = html.escape(str(std), quote=True)
     stat = vdata.get('status') or (f"facts checked {vdata['verified_at']}"
                                    if vdata.get('verified_at') else "no status recorded")
@@ -343,7 +289,6 @@ md_body = xfindings.replace("`", "&grave;")
 # Markdown body from x-findings: raw tweet text/authors - full HTML escape,
 # it goes into a <pre> verbatim. (Escaping backticks only leaves <script> live.)
 md_body = html.escape(xfindings)
->>>>>>> 382d5fc (minor modifications)
 
 html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -365,9 +310,6 @@ html = f"""<!DOCTYPE html>
     .search input {{ width:100%; padding:0.75rem 1rem; font-size:1rem; border:2px solid #ddd; border-radius:8px; }}
     .cards {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1rem; margin:1.5rem 0; }}
     .card {{ background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1); overflow:hidden; }}
-<<<<<<< HEAD
-    .card-header {{ padding:0.75rem 1rem; background:#fafafa; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center; }}
-=======
     .card-header {{ padding:0.75rem 1rem; background:#fafafa; border-bottom:1px solid #eee; display:flex; justify-content:space-between; align-items:center; gap:0.5rem; cursor:pointer; }}
     .card-header:focus-visible {{ outline:2px solid #1f2937; outline-offset:-2px; }}
     .caret {{ color:#999; font-size:0.8rem; transition:transform 0.15s; flex-shrink:0; }}
@@ -380,17 +322,11 @@ html = f"""<!DOCTYPE html>
     .model-list code {{ font-size:0.78rem; word-break:break-all; }}
     .mctx {{ color:#777; white-space:nowrap; font-size:0.75rem; }}
     .card-details blockquote {{ margin:0.25rem 0 0; padding:0.3rem 0.6rem; border-left:3px solid #d7d7dd; color:#555; font-size:0.78rem; }}
->>>>>>> 382d5fc (minor modifications)
     .card-name {{ font-weight:600; }}
     .badge {{ font-size:0.75rem; padding:0.2rem 0.5rem; border-radius:12px; }}
     .badge-verified {{ background:#dcfce7; color:#166534; }}
     .badge-active {{ background:#dbeafe; color:#1e40af; }}
     .badge-expired {{ background:#fee2e2; color:#991b1b; }}
-<<<<<<< HEAD
-    .badge-unverified {{ background:#f3f4f6; color:#6b7280; }}
-    .card-body {{ padding:1rem; }}
-    .card-body p {{ margin:0.25rem 0; font-size:0.9rem; }}
-=======
     .badge-probed {{ background:#ede9fe; color:#5b21b6; }}
     .badge-unverified {{ background:#f3f4f6; color:#6b7280; }}
     .card-body {{ padding:1rem; }}
@@ -407,7 +343,6 @@ html = f"""<!DOCTYPE html>
     .filters {{ display:flex; gap:0.5rem; flex-wrap:wrap; margin:0.75rem 0 1rem; }}
     .fbtn {{ border:1px solid #ddd; background:#fff; border-radius:16px; padding:0.35rem 0.8rem; font-size:0.85rem; cursor:pointer; }}
     .fbtn.active {{ background:#1f2937; color:#fff; border-color:#1f2937; }}
->>>>>>> 382d5fc (minor modifications)
     .card-body code {{ background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:3px; font-size:0.8rem; }}
     .verified-section {{ margin:2rem 0; padding:1rem; background:#fff; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.1); }}
     details {{ margin:0.5rem 0; }}
@@ -425,10 +360,7 @@ html = f"""<!DOCTYPE html>
     
     <div class="stats">
       <div class="stat"><div class="stat-num">{verified_count}</div><div class="stat-label">Verified</div></div>
-<<<<<<< HEAD
-=======
       <div class="stat"><div class="stat-num">{keyless}</div><div class="stat-label">Keyless</div></div>
->>>>>>> 382d5fc (minor modifications)
       <div class="stat"><div class="stat-num">{unverified}</div><div class="stat-label">Unverified</div></div>
       <div class="stat"><div class="stat-num">{expired}</div><div class="stat-label">Expired</div></div>
       <div class="stat"><div class="stat-num">{len(models)}</div><div class="stat-label">Total</div></div>
@@ -437,8 +369,6 @@ html = f"""<!DOCTYPE html>
     <div class="search">
       <input type="text" id="search" placeholder="Search providers...">
     </div>
-<<<<<<< HEAD
-=======
     <div class="filters">
       <button class="fbtn" data-filter="keyless">🔓 No key needed</button>
       <button class="fbtn" data-filter="notrain">🧠 No training on prompts</button>
@@ -447,7 +377,6 @@ html = f"""<!DOCTYPE html>
       <button class="fbtn" data-filter="promo">⏳ Promo active now</button>
       <span class="muted" id="shown-count" style="align-self:center"></span>
     </div>
->>>>>>> 382d5fc (minor modifications)
     
     <div class="cards" id="cards">
 {cards}
@@ -470,15 +399,6 @@ html = f"""<!DOCTYPE html>
   </div>
   
   <script>
-<<<<<<< HEAD
-    document.getElementById("search").addEventListener("input", function() {{
-      var q = this.value.toLowerCase();
-      document.querySelectorAll(".card").forEach(function(c) {{
-        var name = c.querySelector(".card-name").textContent.toLowerCase();
-        c.style.display = name.includes(q) ? "" : "none";
-      }});
-    }});
-=======
     var active = {{}};
     function apply() {{
       var q = document.getElementById("search").value.toLowerCase();
@@ -515,7 +435,6 @@ html = f"""<!DOCTYPE html>
       }});
     }});
     apply();
->>>>>>> 382d5fc (minor modifications)
   </script>
 </body>
 </html>"""

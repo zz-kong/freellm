@@ -2,14 +2,6 @@
   {
     "provider": "Ollama Cloud",
     "name": "Ollama Cloud",
-<<<<<<< HEAD
-    "base_url": "http://tokenrouter.com",
-    "models": [
-      {
-        "name": "ollama-cloud-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "https://ollama.com/v1",
     "models": [
       {
@@ -66,7 +58,6 @@
         "name_verified": true,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -75,24 +66,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 16,
-    "_confidence": 6,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [
       "http://tokenrouter.com",
@@ -107,23 +88,15 @@
       "checked_at": "2026-09-09T03:39:08+00:00",
       "real_model_ids": true
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Google Gemini",
     "name": "Google Gemini",
-<<<<<<< HEAD
-    "base_url": "https://openrouter.ai/collections/free-models",
-    "models": [
-      {
-        "name": "google-gemini-free",
-=======
     "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
     "models": [
       {
         "name": "google-gemini-free",
         "name_verified": false,
->>>>>>> 382d5fc (minor modifications)
         "context": 131000,
         "output": 65500,
         "modality": "text"
@@ -134,23 +107,13 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true,
       "human_reviewers": true,
-<<<<<<< HEAD
-      "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota"
-    },
-    "_source": "x_scan",
-=======
       "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota",
       "verdict": "risk_confirmed",
       "detail": "Free quota counts as 'Unpaid Services': Google uses submitted content and responses to 'provide, improve, and develop' its products and ML technologies, and human reviewers may read/annotate inputs and outputs. Paid quota is the opposite: prompts/responses are not used to improve products."
@@ -161,29 +124,16 @@
       "https://openrouter.ai/collections/free-models",
       "https://ai.google.dev/gemini-api/docs/pr"
     ],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 19,
     "_confidence": 6,
     "_verified_status": "active",
     "_claim_verdict": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off.",
-<<<<<<< HEAD
-    "_privacy_quote": "When you use Unpaid Services, including, for example, Google AI Studio and the unpaid quota on Gemini API, Google uses the content you submit to the Services and any generated responses to provide, improve, and develop Google products and services and machine learning technologies"
-=======
     "_privacy_quote": "When you use Unpaid Services, including, for example, Google AI Studio and the unpaid quota on Gemini API, Google uses the content you submit to the Services and any generated responses to provide, improve, and develop Google products and services and machine learning technologies",
     "_verified_at": "2026-09-08"
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "OpenCode Zen",
     "name": "OpenCode Zen",
-<<<<<<< HEAD
-    "base_url": "https://ollama.com/",
-    "models": [
-      {
-        "name": "opencode-zen-free",
-        "context": 1000000,
-        "output": 500000,
-=======
     "base_url": "https://opencode.ai/zen/v1",
     "models": [
       {
@@ -240,7 +190,6 @@
         "name_verified": true,
         "context": 1000000,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -249,24 +198,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 6,
-    "_confidence": 5,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [
       "https://ollama.com/"
@@ -279,26 +218,10 @@
       "checked_at": "2026-09-09T03:39:09+00:00",
       "real_model_ids": true
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "OpenRouter",
     "name": "OpenRouter",
-<<<<<<< HEAD
-    "base_url": "https://openrouter.ai/collections/fr",
-    "models": [
-      {
-        "name": "openrouter-free",
-        "context": 131000,
-        "output": 65500,
-        "modality": "text"
-      },
-      {
-        "name": "openrouter-free",
-        "context": 256000,
-        "output": 128000,
-        "modality": "text"
-=======
     "base_url": "https://openrouter.ai/api/v1",
     "models": [
       {
@@ -388,7 +311,6 @@
           "tool_calling": true,
           "vision": true
         }
->>>>>>> 382d5fc (minor modifications)
       }
     ],
     "auth": "api_key",
@@ -396,24 +318,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 11,
-    "_confidence": 5,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [],
     "_x_posts": 11,
@@ -424,23 +336,15 @@
       "checked_at": "2026-09-09T03:39:06+00:00",
       "real_model_ids": true
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Groq",
     "name": "Groq",
-<<<<<<< HEAD
-    "base_url": "https://ai.google.dev/gemini-api/docs/pricing",
-    "models": [
-      {
-        "name": "groq-free",
-=======
     "base_url": "https://api.groq.com/openai/v1",
     "models": [
       {
         "name": "groq-free",
         "name_verified": false,
->>>>>>> 382d5fc (minor modifications)
         "context": 131000,
         "output": 65500,
         "modality": "text"
@@ -451,24 +355,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 5,
-    "_confidence": 4.7,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [
       "https://ai.google.dev/gemini-api/docs/pricing"
@@ -480,19 +374,10 @@
       "status": "endpoint_alive_listing_http_401",
       "checked_at": "2026-09-09T03:39:06+00:00"
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Mistral AI",
     "name": "Mistral AI",
-<<<<<<< HEAD
-    "base_url": "https://console.groq.com/",
-    "models": [
-      {
-        "name": "mistral-ai-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "https://api.mistral.ai/v1",
     "models": [
       {
@@ -500,7 +385,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -509,24 +393,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 3,
-    "_confidence": 4.0,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [
       "https://console.groq.com/",
@@ -539,19 +413,10 @@
       "status": "endpoint_alive_listing_http_401",
       "checked_at": "2026-09-09T03:39:06+00:00"
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Cloudflare Workers AI",
     "name": "Cloudflare Workers AI",
-<<<<<<< HEAD
-    "base_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
-    "models": [
-      {
-        "name": "cloudflare-workers-ai-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -559,7 +424,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -568,26 +432,18 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [
       "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key"
     ],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 7,
     "_confidence": 4,
     "_verified_status": "unverified"
@@ -595,14 +451,6 @@
   {
     "provider": "Z AI",
     "name": "Z AI",
-<<<<<<< HEAD
-    "base_url": "https://api.zai.com/v1",
-    "models": [
-      {
-        "name": "z-ai-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -610,7 +458,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -619,24 +466,16 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 2,
     "_confidence": 3.7,
     "_verified_status": "unverified"
@@ -644,14 +483,6 @@
   {
     "provider": "Qwen",
     "name": "Qwen",
-<<<<<<< HEAD
-    "base_url": "https://ai.google.dev/gemini-api/docs/pricing",
-    "models": [
-      {
-        "name": "qwen-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -659,7 +490,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -668,27 +498,19 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [
       "https://ai.google.dev/gemini-api/docs/pricing",
       "https://console.groq.com/"
     ],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 3,
     "_confidence": 3.0,
     "_verified_status": "unverified"
@@ -696,14 +518,6 @@
   {
     "provider": "Cerebras",
     "name": "Cerebras",
-<<<<<<< HEAD
-    "base_url": "https://console.groq.com/",
-    "models": [
-      {
-        "name": "cerebras-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "https://api.cerebras.ai/v1",
     "models": [
       {
@@ -711,7 +525,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -720,24 +533,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 2,
-    "_confidence": 2.7,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "trusted_host",
     "_mentioned_urls": [
       "https://console.groq.com/",
@@ -750,19 +553,10 @@
       "status": "endpoint_alive_listing_http_403",
       "checked_at": "2026-09-09T03:39:07+00:00"
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "DeepSeek",
     "name": "DeepSeek",
-<<<<<<< HEAD
-    "base_url": "https://api.deepseek.com/v1",
-    "models": [
-      {
-        "name": "deepseek-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -770,7 +564,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -779,24 +572,16 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 3,
     "_confidence": 2.0,
     "_verified_status": "unverified"
@@ -804,14 +589,6 @@
   {
     "provider": "Sarvam AI",
     "name": "Sarvam AI",
-<<<<<<< HEAD
-    "base_url": "https://api.sarvamai.com/v1",
-    "models": [
-      {
-        "name": "sarvam-ai-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -819,7 +596,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -828,24 +604,16 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 1,
     "_confidence": 0.3,
     "_verified_status": "unverified"
@@ -853,14 +621,6 @@
   {
     "provider": "NVIDIA NIM",
     "name": "NVIDIA NIM",
-<<<<<<< HEAD
-    "base_url": "https://api.nvidianim.com/v1",
-    "models": [
-      {
-        "name": "nvidia-nim-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "https://integrate.api.nvidia.com/v1",
     "models": [
       {
@@ -917,7 +677,6 @@
         "name_verified": true,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -926,24 +685,14 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-    "_x_posts": 1,
-    "_confidence": 0.3,
-    "_verified_status": "unverified"
-=======
     "_base_url_source": "verified",
     "_mentioned_urls": [],
     "_x_posts": 1,
@@ -957,19 +706,10 @@
       "checked_at": "2026-09-09T03:39:09+00:00",
       "real_model_ids": true
     }
->>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "SambaNova",
     "name": "SambaNova",
-<<<<<<< HEAD
-    "base_url": "https://api.sambanova.com/v1",
-    "models": [
-      {
-        "name": "sambanova-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -977,7 +717,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -986,24 +725,16 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 1,
     "_confidence": 0.3,
     "_verified_status": "unverified"
@@ -1011,14 +742,6 @@
   {
     "provider": "Hugging Face",
     "name": "Hugging Face",
-<<<<<<< HEAD
-    "base_url": "https://api.huggingface.com/v1",
-    "models": [
-      {
-        "name": "hugging-face-free",
-        "context": 131072,
-        "output": 8192,
-=======
     "base_url": "",
     "models": [
       {
@@ -1026,7 +749,6 @@
         "name_verified": false,
         "context": null,
         "output": null,
->>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -1035,39 +757,21 @@
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
-<<<<<<< HEAD
-      "tool_calling": true,
-      "vision": true
-=======
       "tool_calling": null,
       "vision": null
->>>>>>> 382d5fc (minor modifications)
     },
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true
     },
     "_source": "x_scan",
-<<<<<<< HEAD
-=======
     "_base_url_source": "none",
     "_mentioned_urls": [],
->>>>>>> 382d5fc (minor modifications)
     "_x_posts": 1,
     "_confidence": 0.3,
     "_verified_status": "unverified"
   },
   {
-<<<<<<< HEAD
-    "provider": "Ollama",
-    "name": "Ollama",
-    "base_url": "https://cloud.ollama.com/v1",
-    "models": [
-      {
-        "name": "ollama/free-7b",
-        "context": 131072,
-        "output": 4096
-=======
     "provider": "LLM7",
     "name": "LLM7",
     "base_url": "https://api.llm7.io/v1",
@@ -1127,57 +831,10 @@
         "context": null,
         "output": null,
         "modality": "text"
->>>>>>> 382d5fc (minor modifications)
       }
     ],
     "auth": "api_key",
     "free_tier": true,
-<<<<<<< HEAD
-    "rate_limits": {
-      "requests_per_minute": 10,
-      "requests_per_day": 500
-    },
-    "cost": "free",
-    "capabilities": {
-      "tool_calling": false,
-      "vision": false
-    },
-    "privacy": {
-      "logs_prompts": false,
-      "use_for_training": false
-    },
-    "_source": "hand_verified",
-    "_verified_status": "unverified"
-  },
-  {
-    "provider": "SiliconFlow",
-    "name": "SiliconFlow",
-    "base_url": "https://api.siliconflow.cn/v1",
-    "models": [
-      {
-        "name": "free-mixtral-8x7b",
-        "context": 32768,
-        "output": 4096
-      }
-    ],
-    "auth": "api_key",
-    "free_tier": true,
-    "rate_limits": {
-      "requests_per_minute": 20,
-      "requests_per_day": 1000
-    },
-    "cost": "free",
-    "capabilities": {
-      "tool_calling": true,
-      "vision": false
-    },
-    "privacy": {
-      "logs_prompts": true,
-      "use_for_training": false
-    },
-    "_source": "hand_verified",
-    "_verified_status": "unverified"
-=======
     "rate_limits": {},
     "cost": "free",
     "capabilities": {
@@ -1193,6 +850,5 @@
       "checked_at": "2026-09-09T03:39:07+00:00",
       "real_model_ids": true
     }
->>>>>>> 382d5fc (minor modifications)
   }
 ]

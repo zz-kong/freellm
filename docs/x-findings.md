@@ -1,10 +1,6 @@
 # X findings (via x.pcstyle.dev)
 
-<<<<<<< HEAD
-- generated: `2026-09-08T16:01:23.247069+00:00`
-=======
 - generated: `2026-09-09T03:18:49.051526+00:00`
->>>>>>> 382d5fc (minor modifications)
 - posts scanned: `82`
 - providers with leads: `16`
 
@@ -229,11 +225,7 @@ These came only from public posts. Check the provider docs/terms before adding t
 - privacy risk: none
 - privacy positive: none
 
-<<<<<<< HEAD
-  - Thu Aug 27 @kaddisdeployed (1558 views) *(full thread)*: e API mode no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key  Cloudflare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cl
-=======
   - Thu Aug 27 @kaddisdeployed (1558 views) *(full thread)*: no credit card required to get started usage limits apply  https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key  Cloudflare Workers AI  run AI models through Cloudflare useful for AI apps and agents free usage depends on your plan  https://developers.cloudflare.co
->>>>>>> 382d5fc (minor modifications)
     <https://x.com/kaddisdeployed/status/2092990800573415636>
   - Thu Aug 27 @painn_x (63 views) *(reply)* *(full thread)*: @kaddisdeployed they’re all goated
     <https://x.com/painn_x/status/2092992042712306010>
@@ -341,11 +333,7 @@ These came only from public posts. Check the provider docs/terms before adding t
 - privacy risk: none
 - privacy positive: none
 
-<<<<<<< HEAD
-  - 2026-09-03 @zefirium (9945 views): x M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8NdpaKRz
-=======
   - 2026-09-03 @zefirium (9945 views): MiniMax M3, Kimi K3, GPT-5.6 Luna, Nemotron 3 Ultra, and Meta Muse Spark 1.3 - all FREE.  > KiosAPI: MiniMax M3, Kimi K3, GLM 5.3 Flash, GPT-5.6 Luna, Agnes 2.5 Pro, NVIDIA Nemotron. Limited-time $0 row, OpenAI-compatible: https://t.co/9Xr2YCTYzS  > Azure for Students: $100 Azure https://t.co/or8Ndp
->>>>>>> 382d5fc (minor modifications)
     <https://x.com/zefirium/status/2095552339591430539>
 
 ## SambaNova
