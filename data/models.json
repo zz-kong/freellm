@@ -2,12 +2,71 @@
   {
     "provider": "Ollama Cloud",
     "name": "Ollama Cloud",
+<<<<<<< HEAD
     "base_url": "http://tokenrouter.com",
     "models": [
       {
         "name": "ollama-cloud-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "https://ollama.com/v1",
+    "models": [
+      {
+        "name": "kimi-k2.6",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "kimi-k2.7-code",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "nemotron-3-ultra",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "gemma4:31b",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "nemotron-3-super",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "deepseek-v4-flash:0731",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "glm-5.3-flash",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "gpt-oss:120b",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -15,8 +74,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -25,16 +89,44 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 16,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 16,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "public_model_list",
+      "checked_at": "2026-09-09T03:39:08+00:00",
+      "real_model_ids": true
+    },
+    "mentioned_urls": [
+      "http://tokenrouter.com",
+      "https://tokenrouter.com/",
+      "https://github.com/ollama/ollama"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Google Gemini",
     "name": "Google Gemini",
+<<<<<<< HEAD
     "base_url": "https://openrouter.ai/collections/free-models",
     "models": [
       {
         "name": "google-gemini-free",
+=======
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "models": [
+      {
+        "name": "google-gemini-free",
+        "name_verified": false,
+>>>>>>> 382d5fc (minor modifications)
         "context": 131000,
         "output": 65500,
         "modality": "text"
@@ -44,30 +136,116 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
       "logs_prompts": true,
       "use_for_training": true,
       "human_reviewers": true,
+<<<<<<< HEAD
       "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota"
     },
     "status": "active",
     "verified_from_x": true,
     "context_from_x": 19,
     "promo_warning": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off."
+=======
+      "regional_exception": "In the EEA, Switzerland and the UK the Paid-Services data terms apply even to the unpaid quota",
+      "verdict": "risk_confirmed",
+      "detail": "Free quota counts as 'Unpaid Services': Google uses submitted content and responses to 'provide, improve, and develop' its products and ML technologies, and human reviewers may read/annotate inputs and outputs. Paid quota is the opposite: prompts/responses are not used to improve products.",
+      "quote": "When you use Unpaid Services, including, for example, Google AI Studio and the unpaid quota on Gemini API, Google uses the content you submit to the Services and any generated responses to provide, improve, and develop Google products and services and machine learning technologies"
+    },
+    "status": "active",
+    "verified_from_x": true,
+    "base_url_source": "verified",
+    "context_from_x": 19,
+    "promo_warning": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off.",
+    "promo": null,
+    "verified_at": "2026-09-08",
+    "probed": null,
+    "mentioned_urls": [
+      "https://openrouter.ai/collections/free-models",
+      "https://ai.google.dev/gemini-api/docs/pr"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "OpenCode Zen",
     "name": "OpenCode Zen",
+<<<<<<< HEAD
     "base_url": "https://ollama.com/",
     "models": [
       {
         "name": "opencode-zen-free",
         "context": 1000000,
         "output": 500000,
+=======
+    "base_url": "https://opencode.ai/zen/v1",
+    "models": [
+      {
+        "name": "claude-fable-5",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-fable-5-1",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-opus-5",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-opus-4-8",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-opus-4-7",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-opus-4-6",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-opus-4-5",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-sonnet-5",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -75,8 +253,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -85,12 +268,31 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 6,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 6,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "public_model_list",
+      "checked_at": "2026-09-09T03:39:09+00:00",
+      "real_model_ids": true
+    },
+    "mentioned_urls": [
+      "https://ollama.com/"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "OpenRouter",
     "name": "OpenRouter",
+<<<<<<< HEAD
     "base_url": "https://openrouter.ai/collections/fr",
     "models": [
       {
@@ -104,14 +306,110 @@
         "context": 256000,
         "output": 128000,
         "modality": "text"
+=======
+    "base_url": "https://openrouter.ai/api/v1",
+    "models": [
+      {
+        "name": "nex-agi/nex-n2.5-mini:free",
+        "name_verified": true,
+        "context": 262144,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": false
+        }
+      },
+      {
+        "name": "nex-agi/nex-n2.5-pro:free",
+        "name_verified": true,
+        "context": 262144,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": true
+        }
+      },
+      {
+        "name": "inclusionai/ling-3.0-flash-sante:free",
+        "name_verified": true,
+        "context": 262144,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": false
+        }
+      },
+      {
+        "name": "inclusionai/ling-3.0-flash-fin:free",
+        "name_verified": true,
+        "context": 262144,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": false
+        }
+      },
+      {
+        "name": "dots-studio/dots-3-note-preview:free",
+        "name_verified": true,
+        "context": 512000,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": true
+        }
+      },
+      {
+        "name": "liquid/lfm-2.5-2.6b:free",
+        "name_verified": true,
+        "context": 65536,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": false
+        }
+      },
+      {
+        "name": "nvidia/nemotron-3.5-lightning:free",
+        "name_verified": true,
+        "context": 1000000,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": false
+        }
+      },
+      {
+        "name": "thinkingmachines/inkling-small:free",
+        "name_verified": true,
+        "context": 1048576,
+        "output": null,
+        "modality": "text",
+        "capabilities": {
+          "tool_calling": true,
+          "vision": true
+        }
+>>>>>>> 382d5fc (minor modifications)
       }
     ],
     "auth": "api_key",
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -120,16 +418,40 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 11,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 11,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "ok",
+      "checked_at": "2026-09-09T03:39:06+00:00",
+      "real_model_ids": true
+    },
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Groq",
     "name": "Groq",
+<<<<<<< HEAD
     "base_url": "https://ai.google.dev/gemini-api/docs/pricing",
     "models": [
       {
         "name": "groq-free",
+=======
+    "base_url": "https://api.groq.com/openai/v1",
+    "models": [
+      {
+        "name": "groq-free",
+        "name_verified": false,
+>>>>>>> 382d5fc (minor modifications)
         "context": 131000,
         "output": 65500,
         "modality": "text"
@@ -139,8 +461,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -149,18 +476,45 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 5,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 5,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "endpoint_alive_listing_http_401",
+      "checked_at": "2026-09-09T03:39:06+00:00"
+    },
+    "mentioned_urls": [
+      "https://ai.google.dev/gemini-api/docs/pricing"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Mistral AI",
     "name": "Mistral AI",
+<<<<<<< HEAD
     "base_url": "https://console.groq.com/",
     "models": [
       {
         "name": "mistral-ai-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "https://api.mistral.ai/v1",
+    "models": [
+      {
+        "name": "mistral-ai-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -168,8 +522,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -178,18 +537,46 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 3,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 3,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "endpoint_alive_listing_http_401",
+      "checked_at": "2026-09-09T03:39:06+00:00"
+    },
+    "mentioned_urls": [
+      "https://console.groq.com/",
+      "https://www.cerebras.ai/pricing"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Cloudflare Workers AI",
     "name": "Cloudflare Workers AI",
+<<<<<<< HEAD
     "base_url": "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key",
     "models": [
       {
         "name": "cloudflare-workers-ai-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "cloudflare-workers-ai-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -197,8 +584,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -207,18 +599,42 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 7,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 7,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [
+      "https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Z AI",
     "name": "Z AI",
+<<<<<<< HEAD
     "base_url": "https://api.zai.com/v1",
     "models": [
       {
         "name": "z-ai-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "z-ai-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -226,8 +642,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -236,18 +657,40 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 2,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 2,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Qwen",
     "name": "Qwen",
+<<<<<<< HEAD
     "base_url": "https://ai.google.dev/gemini-api/docs/pricing",
     "models": [
       {
         "name": "qwen-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "qwen-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -255,8 +698,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -265,18 +713,43 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 3,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 3,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [
+      "https://ai.google.dev/gemini-api/docs/pricing",
+      "https://console.groq.com/"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Cerebras",
     "name": "Cerebras",
+<<<<<<< HEAD
     "base_url": "https://console.groq.com/",
     "models": [
       {
         "name": "cerebras-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "https://api.cerebras.ai/v1",
+    "models": [
+      {
+        "name": "cerebras-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -284,8 +757,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -294,18 +772,46 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 2,
     "promo_warning": null
+=======
+    "base_url_source": "trusted_host",
+    "context_from_x": 2,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "endpoint_alive_listing_http_403",
+      "checked_at": "2026-09-09T03:39:07+00:00"
+    },
+    "mentioned_urls": [
+      "https://console.groq.com/",
+      "https://docs.mistral.ai/getting-start"
+    ],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "DeepSeek",
     "name": "DeepSeek",
+<<<<<<< HEAD
     "base_url": "https://api.deepseek.com/v1",
     "models": [
       {
         "name": "deepseek-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "deepseek-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -313,8 +819,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -323,18 +834,40 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 3,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 3,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Sarvam AI",
     "name": "Sarvam AI",
+<<<<<<< HEAD
     "base_url": "https://api.sarvamai.com/v1",
     "models": [
       {
         "name": "sarvam-ai-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "sarvam-ai-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -342,8 +875,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -352,18 +890,89 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 1,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 1,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "NVIDIA NIM",
     "name": "NVIDIA NIM",
+<<<<<<< HEAD
     "base_url": "https://api.nvidianim.com/v1",
     "models": [
       {
         "name": "nvidia-nim-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "https://integrate.api.nvidia.com/v1",
+    "models": [
+      {
+        "name": "01-ai/yi-large",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "adept/fuyu-8b",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "ai21labs/jamba-1.5-large-instruct",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "aisingapore/sea-lion-7b-instruct",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "bigcode/starcoder2-15b",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "databricks/dbrx-instruct",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "deepseek-ai/deepseek-v4-flash-0731",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -371,8 +980,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -381,18 +995,44 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 1,
     "promo_warning": null
+=======
+    "base_url_source": "verified",
+    "context_from_x": 1,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": "2026-09-09",
+    "probed": {
+      "status": "public_model_list",
+      "checked_at": "2026-09-09T03:39:09+00:00",
+      "real_model_ids": true
+    },
+    "mentioned_urls": [],
+    "notes": "Endpoint + auth verified live 2026-09-09: GET /v1/models is public (81 model ids); POST /v1/chat/completions without a key returns 401 'Header of type authorization was missing', so a key IS required. Free-tier conditions, rate limits and privacy terms were NOT re-checked today - confirm on build.nvidia.com before relying on them.",
+    "source": "https://build.nvidia.com/models"
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "SambaNova",
     "name": "SambaNova",
+<<<<<<< HEAD
     "base_url": "https://api.sambanova.com/v1",
     "models": [
       {
         "name": "sambanova-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "sambanova-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -400,8 +1040,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -410,18 +1055,40 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 1,
     "promo_warning": null
+=======
+    "base_url_source": "none",
+    "context_from_x": 1,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   },
   {
     "provider": "Hugging Face",
     "name": "Hugging Face",
+<<<<<<< HEAD
     "base_url": "https://api.huggingface.com/v1",
     "models": [
       {
         "name": "hugging-face-free",
         "context": 131072,
         "output": 8192,
+=======
+    "base_url": "",
+    "models": [
+      {
+        "name": "hugging-face-free",
+        "name_verified": false,
+        "context": null,
+        "output": null,
+>>>>>>> 382d5fc (minor modifications)
         "modality": "text"
       }
     ],
@@ -429,8 +1096,13 @@
     "free_tier": true,
     "rate_limits": {},
     "capabilities": {
+<<<<<<< HEAD
       "tool_calling": true,
       "vision": true
+=======
+      "tool_calling": null,
+      "vision": null
+>>>>>>> 382d5fc (minor modifications)
     },
     "cost": "free",
     "privacy": {
@@ -439,6 +1111,7 @@
     },
     "status": "unverified",
     "verified_from_x": true,
+<<<<<<< HEAD
     "context_from_x": 1,
     "promo_warning": null
   },
@@ -451,10 +1124,83 @@
         "name": "ollama/free-7b",
         "context": 131072,
         "output": 4096
+=======
+    "base_url_source": "none",
+    "context_from_x": 1,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": null,
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+  },
+  {
+    "provider": "LLM7",
+    "name": "LLM7",
+    "base_url": "https://api.llm7.io/v1",
+    "models": [
+      {
+        "name": "DeepSeek-V4-Flash-0731",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "Inkling",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "Inkling-Small",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "L3-8B-Lunaris-v1-Turbo",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "XiaomiMiMo/MiMo-V2.5",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "XiaomiMiMo/MiMo-V2.5-Pro",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "chroma-v.46-flash",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+      },
+      {
+        "name": "claude-fable-5",
+        "name_verified": true,
+        "context": null,
+        "output": null,
+        "modality": "text"
+>>>>>>> 382d5fc (minor modifications)
       }
     ],
     "auth": "api_key",
     "free_tier": true,
+<<<<<<< HEAD
     "rate_limits": {
       "requests_per_minute": 10,
       "requests_per_day": 500
@@ -503,5 +1249,29 @@
     "verified_from_x": false,
     "context_from_x": 0,
     "promo_warning": null
+=======
+    "rate_limits": {},
+    "capabilities": {
+      "tool_calling": null,
+      "vision": null
+    },
+    "cost": "free",
+    "privacy": {},
+    "status": "probed",
+    "verified_from_x": false,
+    "base_url_source": "trusted_host",
+    "context_from_x": 0,
+    "promo_warning": null,
+    "promo": null,
+    "verified_at": null,
+    "probed": {
+      "status": "public_model_list",
+      "checked_at": "2026-09-09T03:39:07+00:00",
+      "real_model_ids": true
+    },
+    "mentioned_urls": [],
+    "notes": null,
+    "source": null
+>>>>>>> 382d5fc (minor modifications)
   }
 ]

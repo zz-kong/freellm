@@ -1,0 +1,74 @@
+# discover-and-publish.yml - keeps the GitHub Pages site live and current.
+#
+# Design constraints (see README "Security Model"):
+#   - No secrets are used. The X scan needs the local browse-x helper, so CI
+#     runs with --skip-x; ground truth comes from the KEYLESS live probes
+#     (OpenRouter free catalog + first-party public /models endpoints).
+#   - Only providers with auth=none are tested here (--keyless), so even a
+#     compromised workflow cannot leak an API key - none exist in the runner.
+#   - docs/site/index.html is deployed as a Pages artifact; it is generated
+#     fresh every run and never trusted from the repo.
+name: Discover & publish free LLM APIs
+
+on:
+  schedule:
+    - cron: '30 6 * * *'   # daily 06:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install jq
+        run: sudo apt-get update -q && sudo apt-get install -yq jq
+
+      - name: Discovery pipeline (keyless probes; X scan skipped)
+        run: bash scripts/gather-llm-apis.sh --skip-x
+
+      - name: Live-test keyless providers only (no credentials in CI)
+        run: python3 scripts/test-apis.py --keyless
+        continue-on-error: true   # provider outages must not block publishing
+
+      - name: Build documentation site
+        run: bash scripts/publish-docs.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: data-snapshot
+          path: |
+            data/models.json
+            data/probes.json
+            data/test-results.json
+          retention-days: 14
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

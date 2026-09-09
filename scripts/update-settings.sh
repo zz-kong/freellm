@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 # update-settings.sh - Update project settings.json with verified LLM models
 # Usage: bash update-settings.sh [--settings <path>]
 
@@ -168,3 +169,16 @@ echo "Backup: $BACKUP_PATH"
 echo ""
 echo "To restore previous settings:"
 echo "  cp $BACKUP_PATH $SETTINGS_PATH"
+=======
+# update-settings.sh - Wrapper for update-settings.py
+#
+# Kept as a shim so README/CI examples using `bash scripts/update-settings.sh`
+# keep working. All logic lives in update-settings.py (the single canonical
+# schema writer - the old bash copy wrote an incompatible format).
+#
+# Usage:
+#   bash scripts/update-settings.sh [--settings <path>]
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec python3 "$SCRIPT_DIR/update-settings.py" "$@"
+>>>>>>> 382d5fc (minor modifications)

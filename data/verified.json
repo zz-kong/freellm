@@ -1,9 +1,18 @@
 {
+<<<<<<< HEAD
   "_note": "Manually verified facts with citations. x-extract.py merges these onto X-derived leads. Keep quotes verbatim and dated - promotions and terms change.",
+=======
+  "_note": "Manually verified facts with citations. x-extract.py merges these onto X-derived leads. Keep quotes verbatim and dated - promotions and terms change. 'api_base_url' (where present) is the manually verified first-party endpoint: scripts/trust.py treats it as authoritative and API keys are sent ONLY to it (or to hosts on TRUSTED_HOSTS), never to a base_url scraped from a post. 'verified_at' is the date the facts in that entry were last checked against primary sources; docs flag entries older than 30 days as stale.",
+>>>>>>> 382d5fc (minor modifications)
   "as_of": "2026-09-08",
   "providers": {
     "Google Gemini": {
       "status": "active",
+<<<<<<< HEAD
+=======
+      "verified_at": "2026-09-08",
+      "api_base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+>>>>>>> 382d5fc (minor modifications)
       "free_tier": {
         "auth": "API key from AI Studio; no billing account required for free quota",
         "limits_model": "RPM + TPM (input) + RPD, applied per project (not per key); RPD resets midnight Pacific; exact per-model numbers are only shown in AI Studio after login, not published in the docs",
@@ -20,8 +29,21 @@
       },
       "x_claim_verdict": "The X replies warning that the free tier trains on your prompts are substantially CORRECT under the Unpaid Services terms; the originating X post's 'permanent free tier, no billing required' framing omits this trade-off."
     },
+<<<<<<< HEAD
     "Moonshot Kimi": {
       "status": "expired",
+=======
+    "NVIDIA NIM": {
+      "verified_at": "2026-09-09",
+      "api_base_url": "https://integrate.api.nvidia.com/v1",
+      "source": "https://build.nvidia.com/models",
+      "auth": "api_key",
+      "notes": "Endpoint + auth verified live 2026-09-09: GET /v1/models is public (81 model ids); POST /v1/chat/completions without a key returns 401 'Header of type authorization was missing', so a key IS required. Free-tier conditions, rate limits and privacy terms were NOT re-checked today - confirm on build.nvidia.com before relying on them."
+    },
+    "Moonshot Kimi": {
+      "status": "expired",
+      "verified_at": "2026-09-08",
+>>>>>>> 382d5fc (minor modifications)
       "via": "tokenrouter.com (third-party reseller, not Moonshot first-party)",
       "promo": {
         "claim": "Free Kimi K3 access with a 1M context window",

@@ -77,7 +77,11 @@ BAIT     = re.compile(r'\b(?:comment\s+\w+\s+(?:below|and)|follow\s+(?:and|to)\s
                       r'\$[\d,]+\s+(?:worth\s+of\s+)?(?:free\s+)?credits)\b', re.I)
 
 def clean(t):
+<<<<<<< HEAD
     return html.unescape(t or '').replace('\u2028', ' ').replace('\u2028', ' ')
+=======
+    return html.unescape(t or '').replace('\u2028', ' ').replace('\u2029', ' ')
+>>>>>>> 382d5fc (minor modifications)
 
 def to_int(n, unit):
     mult = 1_000 if (unit or 'k').lower() == 'k' else 1_000_000
@@ -229,7 +233,11 @@ def main():
         handle, followers = author_of(p)
         ts = p.get('created_timestamp') or 0
         when = p.get('date') if p.get('date') else (
+<<<<<<< HEAD
             datetime.datetime.utcfromtimestamp(ts).date().isoformat() if ts else '?')
+=======
+            datetime.datetime.fromtimestamp(ts, datetime.timezone.utc).date().isoformat() if ts else '?')
+>>>>>>> 382d5fc (minor modifications)
         spam = bool(BAIT.search(text))
 
         # Window around each provider mention. A list post that names 7 providers
@@ -285,7 +293,11 @@ def main():
             for m in PRIVACY_RISK.finditer(blob): L['privacy_risk'].add(' '.join(m.group(0).split()).lower())
             for m in PRIVACY_OK.finditer(blob): L['privacy_positive'].add(' '.join(m.group(0).split()).lower())
             for m in URL.finditer(blob):
+<<<<<<< HEAD
                 u = m.group(0).rstrip('.,;')
+=======
+                u = m.group(0).rstrip('.,;"\'')
+>>>>>>> 382d5fc (minor modifications)
                 if 't.co/' not in u and 'x.com/' not in u: L['endpoints'].add(u)
 
     ranked = []
@@ -322,7 +334,11 @@ def main():
             'access_signals': sorted(L['access']),
             'privacy_risk_signals': sorted(L['privacy_risk']),
             'privacy_positive_signals': sorted(L['privacy_positive']),
+<<<<<<< HEAD
             'last_seen': datetime.datetime.utcfromtimestamp(L['_latest']).date().isoformat() if L['_latest'] else None,
+=======
+            'last_seen': datetime.datetime.fromtimestamp(L['_latest'], datetime.timezone.utc).date().isoformat() if L['_latest'] else None,
+>>>>>>> 382d5fc (minor modifications)
             'evidence': ev[:8],
         })
     ranked.sort(key=lambda r: -r['confidence'])
